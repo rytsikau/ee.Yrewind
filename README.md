@@ -5,7 +5,7 @@ Yrewind is a command-line program to download the required time interval of any 
 
 
 ## Program screenshot
-<img src='https://github.com/rytsikau/ee.yrewind/blob/main/screenshot.png'>
+<img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
 
 
 ## Quick Start
