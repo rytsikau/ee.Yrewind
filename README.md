@@ -15,7 +15,6 @@ Yrewind is a command-line program to download the required time interval of any 
 
 
 ## Usage info
-
 <br>**The only required command line argument is the '-url':**
 
     yrewind -url=[url]
@@ -45,8 +44,8 @@ Saves the stream from the specified starting point. Date digits can be replaced 
 
     yrewind -url=[url] -duration=[minutes]
 
-Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 60. If parameter is absent, the program will use the default value of 60. The following example will save the last 5 minutes of the live stream up to the moment the program was started:
->     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -duration=5
+Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 60. If parameter is absent, the program will use the default value of 60. The following example will save the last 15 minutes of the live stream up to the moment the program was started:
+>     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -duration=15
 
 
     yrewind -url=[url] -pathchrome='C:\path\to\chrome\'
