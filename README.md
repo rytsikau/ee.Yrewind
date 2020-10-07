@@ -67,15 +67,12 @@ Specifies an alternate path for saving streams. If this parameter is absent, the
 
 To save the last 30 minutes of the stream at the highest available resolution:
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -duration=30 -resolution=9999
-<br>
 
 To save 10 minutes of the stream from yesterday 11:55 pm to today 12:05 am, at the highest available resolution:
 >     yrewind -url='youtube.com/v/9Auq9mYxFEE?fs=1&rel=0' -start=Y:2355 -duration=10
-<br>
 
 To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, to specified directory:
 >     yrewind -url=9Auq9mYxFEE -start=20200505:0455 -resolution=720 -pathsave='D:\Saved_streams\'
-<br>
 
 
 ## Other info
