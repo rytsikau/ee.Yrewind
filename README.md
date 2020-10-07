@@ -1,7 +1,7 @@
 # ee.Yrewind
 Yrewind is a command-line program to download the required time interval of any YouTube active livestream - even if this interval was many hours ago. So this is not a 'current time' recorder - Yrewind allows you to 'rewind' the livestream as many hours back as necessary. Please note that Yrewind can only download a livestream while it's streaming; and is not intended for downloading recorded livestreams as well as 'regular' YouTube videos
 
-### [>> download version 20.101](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.101.zip)
+### [>> download version 20.102](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.102.zip)
 
 
 ## Program screenshot
@@ -76,13 +76,13 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 
 
 ## Other info
-* Livestream interruptions (streamer side) may cause a shift in estimated time. For example, if the stream was interrupted for 1 hour, then 12-hour frames will be downloaded as 11-hour frames
-* The last 7 days (~168 hours) of any livestream are usually (but not always) available for download
+* Loss of packets on the streamer side leads to a shift in the estimated time. Usually the offset is in seconds, but if the internet connection is unstable and/or the stream started a long time ago, it will be minutes or even hours
+* The last 7 days (~168 hours) of any livestream are usually available for download
 * The maximum possible resolution is 1080p, the program does not support higher resolutions
 
 
 ## Known issues
-* Livestreams at 60+ FPS sometimes cause the error 'Cannot process livestream with FFmpeg library (code 9411)'. In this case, it is recommended to run the program with no arguments and select the <C> option to clear the cache. Then try again
+* Some livestreams (usually 60+ FPS) may cause the error 'Cannot process livestream with FFmpeg library (code 9411)'. In this case, you must run the program with no arguments and select the <C> option to clear the cache. Then try again
 
 
 ## Requirements
