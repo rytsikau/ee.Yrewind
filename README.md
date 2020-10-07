@@ -17,7 +17,7 @@ Yrewind is a command-line program to download the required time interval of any 
 ## Usage info
 **The only required command line argument is the '-url':**
 
-    yrewind -url=[url]
+    yrewind -url=[url]  
 With this command, the program saves the last 1 hour of the required livestream at the highest possible resolution. URL can be specified in various formats:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
 >     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
