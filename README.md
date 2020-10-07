@@ -1,11 +1,11 @@
 # ee.Yrewind
 Yrewind is a command-line program to download the required time interval of any YouTube active livestream - even if this interval was many hours ago. So this is not a 'current time' recorder - Yrewind allows you to 'rewind' the livestream as many hours back as necessary. Please note that Yrewind can only download a livestream while it's streaming; and is not intended for downloading recorded livestreams as well as 'regular' YouTube videos
 
-### [>> download version 20.101](https://github.com/rytsikau/ee.yrewind/raw/master/ee.yrewind_20.101.zip)
+### [>> download version 20.101](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.101.zip)
 
 
 ## Program screenshot
-<img src='https://github.com/rytsikau/ee.yrewind/blob/master/screenshot.png'>
+<img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
 
 
 ## Quick Start
