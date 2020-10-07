@@ -23,9 +23,8 @@ With this command, the program saves the last 1 hour of the required livestream 
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
 >     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
 >     yrewind -url=9Auq9mYxFEE
-<br>
 
-**Also, the program has several optional parameters:**
+<br>**Also, the program has several optional parameters:**
 
     yrewind -url=[url] -resolution=[pixels]
 
