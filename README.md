@@ -15,7 +15,8 @@ Yrewind is a command-line program to download the required time interval of any 
 
 
 ## Usage info
-**The only required command line argument is the '-url':**
+
+<br>**The only required command line argument is the '-url':**
 
     yrewind -url=[url]
 
@@ -23,6 +24,7 @@ With this command, the program saves the last 1 hour of the required livestream 
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
 >     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
 >     yrewind -url=9Auq9mYxFEE
+
 
 <br>**Also, the program has several optional parameters:**
 
@@ -32,37 +34,37 @@ Specifies the required resolution in pixels. The minimum value is 0, the maximum
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -resolution=0
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -resolution=144
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -resolution=150
-<br>
+
 
     yrewind -url=[url] -start=[YYYYMMDD:hhmm]
 
 Saves the stream from the specified starting point. Date digits can be replaced with letter T (means 'today') or Y (means 'yesterday'). If parameter is absent, the program will save the specified number of minutes (see '-duration' parameter) up to the moment the program was started. In the following first example, the program will save the time interval from 7:10 am on July 15, 2020 to 8:10 am on July 15, 2020. In the second example, the program will save the time interval from yesterday 11:15 pm to today at 12:15 am:
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -start=20200715:0710
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -start=Y:2315
-<br>
+
 
     yrewind -url=[url] -duration=[minutes]
 
 Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 60. If parameter is absent, the program will use the default value of 60. The following example will save the last 5 minutes of the live stream up to the moment the program was started:
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -duration=5
-<br>
+
 
     yrewind -url=[url] -pathchrome='C:\path\to\chrome\'
 
 Specifies the path to the Google Chrome browser. This parameter is required when using the portable version of Chrome
-<br><br>
+
 
     yrewind -url=[url] -pathffmpeg='C:\path\to\ffmpeg\'
 
 Specifies the path to the FFmpeg library. This parameter is required if 'ffmpeg.exe' is not present in the program folder
-<br><br>
+
 
     yrewind -url=[url] -pathsave='D:\path\to\saved\streams\'
 
 Specifies an alternate path for saving streams. If this parameter is absent, the program will save the streams in its own directory
-<br><br>
 
-**More examples:**
+
+<br>**More examples:**
 
 To save the last 30 minutes of the stream at the highest available resolution:
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -duration=30 -resolution=9999
