@@ -1,5 +1,5 @@
 # ee.Yrewind
-Yrewind is a command-line program to download the required time interval of any YouTube active livestream - even if this interval was many hours ago. So this is not a 'current time' recorder - Yrewind allows you to 'rewind' the livestream as many hours back as necessary. Please note that Yrewind can only download a livestream while it's streaming; and is not intended for downloading recorded livestreams as well as 'regular' YouTube videos
+Yrewind is a command-line program to download the specified past portion of an ongoing YouTube livestream, even if that portion was broadcast some time ago. So this is not a 'current time' recorder - Yrewind allows you to 'rewind' the livestream as many hours back as necessary. Please note that Yrewind can only download a livestream while it's streaming; and is not intended for downloading recorded livestreams as well as 'regular' YouTube videos
 
 ### [>> download version 20.102](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.102.zip)
 
@@ -11,7 +11,7 @@ Yrewind is a command-line program to download the required time interval of any 
 ## Quick Start
 1. Unpack the downloaded archive
 2. Open 'start.bat' in a text editor, and insert URLs of required streams instead of existing samples
-3. Save 'start.bat', and run it
+3. Save 'start.bat', and run it!
 
 
 ## Usage info
@@ -88,7 +88,7 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 ## Requirements
 * FFmpeg executable library (included in the archive)
 * Google Chrome 60+ (installed or portable)
-* Microsoft Windows XP or later / Microsoft Windows Server 2003 or later
+* Microsoft Windows XP and on / Microsoft Windows Server 2003 and on
 
 
 ## Tested Configuration
@@ -106,7 +106,7 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 
 
 ## Tags
-youtube-dvr youtube-live youtube-live-stream youtube-live-stream-download youtube-live-stream-dvr youtube-live-stream-record youtube-live-stream-rewind youtube-live-stream-save youtube-livestream youtube-livestream-download youtube-livestream-dvr youtube-livestream-record youtube-livestream-rewind youtube-livestream-save youtube-record youtube-rewind youtube-stream
+youtube-live-stream-download youtube-live-stream-record youtube-live-stream-rewind youtube-live-stream-save youtube-livestream-download youtube-livestream-record youtube-livestream-rewind youtube-livestream-save
 
 
 ## Author
