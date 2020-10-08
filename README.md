@@ -113,4 +113,4 @@ youtube-live-stream-download youtube-live-stream-record youtube-live-stream-rewi
 [(c) Yauheni Rytsikau, 2020](mailto:y.rytsikau@gmail.com)
 
 ---
-[[program page]](https://rytsikau.github.io/ee.yrewind) [[start page]](https://rytsikau.github.io)
+[[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io)
