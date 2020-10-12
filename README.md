@@ -1,7 +1,7 @@
 # ee.Yrewind
-Yrewind is a command-line program to download the specified past portion of an ongoing YouTube livestream, even if that portion was broadcast some time ago. So this is not a 'current time' recorder - Yrewind allows you to 'rewind' the livestream as many hours back as necessary. Please note that Yrewind can only download a livestream while it's streaming; and is not intended for downloading recorded livestreams as well as 'regular' YouTube videos
+Yrewind is a command-line program to download the specified past portion of an ongoing YouTube livestream, even if that portion was broadcast some time ago. So this is not a 'current time' recorder - Yrewind allows you to 'rewind' the livestream as many hours back as necessary. Please note that Yrewind can only download a livestream while it's streaming; and is not intended for downloading recorded livestreams
 
-### [>> download version 20.102](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.102.zip)
+### [>> download version 20.103](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.103.zip)
 
 
 ## Program screenshot
@@ -77,18 +77,20 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 
 ## Other info
 * Loss of packets on the streamer side leads to a shift in the estimated time. Usually the offset is in seconds, but if the internet connection is unstable and/or the stream started a long time ago, it will be minutes or even hours
+* The endpoint of the requested time interval cannot be in the future relative to the time when the program was started
 * The last 7 days (~168 hours) of any livestream are usually available for download
-* The maximum possible resolution is 1080p, the program does not support higher resolutions
+* The maximum possible resolution supported by the program is 1080p
 
 
 ## Known issues
 * Some livestreams (usually 60+ FPS) may cause the error 'Cannot process livestream with FFmpeg library (code 9411)'. In this case, you must run the program with no arguments and select the <C> option to clear the cache. Then try again
+* If the filename contains a sync warning, the video may have errors. In this case, try downloading it later or shift/change the time interval
 
 
 ## Requirements
 * FFmpeg executable library (included in the archive)
 * Google Chrome 60+ (installed or portable)
-* Microsoft Windows XP and on / Microsoft Windows Server 2003 and on
+* Microsoft Windows 7 and on / Microsoft Windows Server 2008 and on
 
 
 ## Tested Configuration
@@ -106,7 +108,7 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 
 
 ## Tags
-youtube-live-stream-download youtube-live-stream-record youtube-live-stream-rewind youtube-live-stream-save youtube-livestream-download youtube-livestream-record youtube-livestream-rewind youtube-livestream-save
+youtube-live-stream-download youtube-live-stream-record youtube-live-stream-save youtube-livestream-download youtube-livestream-record youtube-livestream-save
 
 
 ## Author
