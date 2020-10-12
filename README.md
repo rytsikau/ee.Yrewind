@@ -83,8 +83,9 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 
 
 ## Known issues
-* Some livestreams (usually 60+ FPS) may cause the error 'Cannot process livestream with FFmpeg library'. In this case, you must run the program with no arguments and select the <C> option to clear the cache. Then try again
-* If the filename of the downloaded video contains a sync warning, the video may have errors. In this case, try downloading later or shift / change the time interval
+* Some livestreams (usually 60+ FPS) may cause the error 'Cannot process livestream with FFmpeg library'. In this case, you have to run the program with no arguments and select the option to clear cache. Then try again
+* If the filename of downloaded video contains a sync warning, the video may have errors. In this case, try downloading later or shift / change the time interval
+
 
 ## Requirements
 * FFmpeg executable library (included in the archive)
