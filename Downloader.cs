@@ -1,5 +1,6 @@
-﻿using System.Diagnostics;
+using System.Diagnostics;
 using System.IO;
+using System.Net;
 
 namespace ee.yrewind
 {
@@ -14,10 +15,23 @@ namespace ee.yrewind
             string filenameOutputTmp =
                 Preparer.filenameOutput.Replace(".mp4", "~" + Program.randomString + ".mp4");
 
+            string addingEmbedCover = string.Empty;
+            if (GetEmbedCover(out string embedCoverFullPath))
+            {
+                addingEmbedCover = "-i \"" + embedCoverFullPath +
+                    "\" -map 1 -map 0 -disposition:v:0 attached_pic ";
+            }
+
             string arguments =
-                "-loglevel quiet -stats -protocol_whitelist file,https,tcp,tls -i \"" +
-                Preparer.fullpathMasterPlaylist + "\" -c copy \"" +
-                DataInput.pathSave + filenameOutputTmp + "\"";
+                "-loglevel quiet" + " " +
+                "-stats" + " " +
+                "-protocol_whitelist file,https,tcp,tls" + " " +
+                "-i \"" + Preparer.fullpathMasterPlaylist + "\"" + " " +
+                addingEmbedCover +
+                "-metadata title=\"" + IDInfo.title + "\"" + " " +
+                "-metadata comment=\"saved with " + Program.title + "\"" + " " +
+                "-c copy" + " " +
+                "\"" + DataInput.pathSave + filenameOutputTmp + "\"";
 
             try
             {
@@ -47,6 +61,33 @@ namespace ee.yrewind
             }
 
             return resultCode;
+        }
+        #endregion
+
+        #region GetEmbedCover - Download livestream embed cover
+        bool GetEmbedCover(out string embedCoverFullPath)
+        {
+            embedCoverFullPath = DataInput.pathTemp + Program.randomString + ".jpg";
+
+            if (File.Exists(embedCoverFullPath))
+            {
+                return true;
+            }
+
+            string embedCoverUrl = "https://img.youtube.com/vi/" + DataInput.id + "/0.jpg";
+            try
+            {
+                WebClient stream = new WebClient();
+                stream.DownloadFile(embedCoverUrl, embedCoverFullPath);
+            }
+            catch { }
+
+            if (File.Exists(embedCoverFullPath))
+            {
+                return true;
+            }
+
+            return false;
         }
         #endregion
     }
