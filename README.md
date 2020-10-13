@@ -94,7 +94,7 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 
 
 ## Tested Configuration
-* FFmpeg 4.3 x86 ([Zeranoe static build](https://ffmpeg.zeranoe.com/builds))
+* FFmpeg 4.3 x86 (Zeranoe static build)
 * Google Chrome 62 x86 (portable)
 * Google Chrome 83 x64 (installed)
 * Microsoft Windows 10 Pro x32 version 1909
