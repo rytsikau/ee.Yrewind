@@ -71,7 +71,7 @@ Specifies the path to the FFmpeg library. This parameter is required if 'ffmpeg.
 
 
 
-    -pathsave='D:\path\to\saved\streams\'
+    -pathsave='D:\path\to\save\streams\'
 
 Specifies an alternate path for saving streams. If this parameter is absent, the program will save the streams to the directory where the batch file is located (or from which the command line is launched)
 
