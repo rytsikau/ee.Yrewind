@@ -46,7 +46,7 @@ Specifies the required resolution in pixels (height). If parameter is absent, th
 
     -start=[YYYYMMDD:hhmm]
 
-Saves the stream from the specified starting point. Date digits can be replaced with letter T (means 'today') or Y (means 'yesterday'). If parameter is absent, the program will save the specified number of minutes (see '-duration' parameter) up to the moment the program was started. In the following first example, the program will save the time interval from 7:10AM to 8:10AM on July 15, 2020. In the second example, the program will save the time interval from yesterday 11:15PM to today at 12:15AM:
+Saves the stream from the specified starting point. Date digits can be replaced with letter T (means 'today') or Y (means 'yesterday'). If parameter is absent, the program will save the specified number of minutes (see '-duration' parameter) up to the moment the program was started. In the following first example, the program will save the time interval from 7:10AM to 8:10AM on July 15, 2020. In the second example, the program will save the time interval from yesterday 11:15PM to today 12:15AM:
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -start=20200715:0710
 >     yrewind -url=youtube.com/watch?v=9Auq9mYxFEE -start=Y:2315
 
@@ -73,7 +73,7 @@ Specifies the path to the FFmpeg library. This parameter is required if 'ffmpeg.
 
     -pathsave='D:\path\to\saved\streams\'
 
-Specifies an alternate path for saving streams. If this parameter is absent, the program will save the streams to the directory where the bat file is located (or from which the command line is launched)
+Specifies an alternate path for saving streams. If this parameter is absent, the program will save the streams to the directory where the batch file is located (or from which the command line is launched)
 
 
 
@@ -98,7 +98,7 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 
 ## Other info
 
-* If the filename of downloaded video contains a sync warning, the video file may have errors. In this case, try downloading later or shift / change the time interval
+* If the filename of downloaded video contains a sync warning, the video file may have errors. In this case, try downloading later or shift/change the time interval
 * Loss of packets on the streamer side leads to a shift in the estimated time. Usually the offset is in seconds, but if the internet connection is unstable and/or the stream started a long time ago, it will be minutes or even hours. For example, if the stream was interrupted for 1 hour, then 24-hour frames will be downloaded as 23-hour
 * The endpoint of the requested time interval cannot be in the future relative to the time when the program was started
 * The maximum possible resolution supported by the program is 1080p
