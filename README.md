@@ -1,7 +1,7 @@
 # ee.Yrewind
-Yrewind is a command-line program to download specified past portion of any YouTube live stream. This is not a 'current time' recorder - Yrewind allows you to rewind a live stream the desired number of hours back, and save it as a video file. Please note that Yrewind can only work while a live stream is active; program is not intended for downloading recorded live streams
+Yrewind is a command line program to download specified past portion of any YouTube live stream. It can rewind a live stream the desired number of hours back and save the result as a video file. Note that Yrewind can only work when live streaming is active; the program is not intended for downloading recorded live streams, as well as regular YouTube videos
 
-### [>> download version 20.104](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.104.zip)
+### [>> download version 20.105](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.105.zip)
 
 
 ## Program screenshot
@@ -60,7 +60,12 @@ Specifies the path to the FFmpeg library. This parameter is required if 'ffmpeg.
 
     yrewind -url=[url] -pathsave='D:\path\to\saved\streams\'
 
-Specifies an alternate path for saving streams. If this parameter is absent, the program will save the streams in its own directory
+Specifies an alternate path for saving streams. If this parameter is absent, the program will save the streams to the directory where the bat file is located (or from which the command line is launched)
+
+
+    yrewind -url=[url] -nocache=true
+
+This parameter disables the use of the program cache
 
 
 <br>**More examples:**
@@ -76,15 +81,15 @@ To save 1 hour of the stream from 04:55 am to 05:55 am on May 5, 2020, at 720p, 
 
 
 ## Other info
+* If the filename of downloaded video contains a sync warning, the video file may have errors. In this case, try downloading later or shift / change the time interval
 * Loss of packets on the streamer side leads to a shift in the estimated time. Usually the offset is in seconds, but if the internet connection is unstable and/or the stream started a long time ago, it will be minutes or even hours
 * The endpoint of the requested time interval cannot be in the future relative to the time when the program was started
-* The last 7 days (~168 hours) of any livestream are usually available for download
 * The maximum possible resolution supported by the program is 1080p
+* To determine the earliest available starting point, try download the knowingly unavailable time interval (for example, '-start=19990101:0000'). The program will show a warning indicating the earliest available point at the moment. For long livestreams, the last 7 days are usually available (~168 hours)
 
 
 ## Known issues
-* Some livestreams (usually 60+ FPS) may cause the error 'Cannot process livestream with FFmpeg library'. In this case, you have to run the program with no arguments and select the option to clear cache. Then try again
-* If the filename of downloaded video contains a sync warning, the video may have errors. In this case, try downloading later or shift / change the time interval
+* Some livestreams (usually 60+ FPS) may cause the error 'Cannot process livestream with FFmpeg library' (code 9411). In this case, run the program without arguments and select the option to clear the cache, or add '-nocache=true' parameter to the command line
 
 
 ## Requirements
