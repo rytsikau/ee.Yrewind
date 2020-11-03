@@ -34,7 +34,7 @@ Also the program has the following optional parameters:
 Specifies the required resolution in pixels (height). If the specified resolution is not available, the program uses the closest lower. In the following examples, the livestream will be saved at 480p:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
-* If this parameter is missing, the program uses the default 1080.
+If this parameter is missing, the program uses the default 1080.
 
 <br>**`     -start=[YYYYMMDD:hhmm],  -start=[Y:hhmm],  -start=[T:hhmm],  -start=-[minutes]     `**<br>  
 Specifies the point in time in the past from which the stream will be saved. The value can be written in various formats. The following example saves the time interval from 7:10AM to 8:10AM on July 15, 2020:
