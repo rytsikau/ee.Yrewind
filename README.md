@@ -1,6 +1,6 @@
 # ee.Yrewind
 
-Yrewind is a command line program to download specified past portion of any YouTube live stream. It can rewind a live stream the desired number of hours back and save the result as a video file. Please note that the program can only save videos when streaming is active; and is not intended to download recorded live streams as well as regular YouTube videos.
+Yrewind is a command line program to download specified past portion of any YouTube live stream. It can rewind a live stream the desired number of hours back and save the result as a video file. Please note that the program can only save videos when streaming is active, and is not intended to download recorded live streams as well as regular YouTube videos.
 
 ### [>> download version 20.111](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.111.zip)
 
@@ -13,8 +13,8 @@ Yrewind is a command line program to download specified past portion of any YouT
 ## Quick Start
 
 1. Unpack the downloaded archive
-2. Open *start.bat* in a text editor, and insert URLs of required streams instead of existing samples
-3. Save *start.bat*, and run it
+2. Open *start.bat* in a text editor and paste the URLs of required streams instead of existing samples
+3. Save *start.bat* and run it
 
 
 ## Usage info
@@ -45,7 +45,7 @@ To save the time interval from today 02:00AM to 03:00AM:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=T:0200
 To save the time interval from 3 hours ago to 2 hours ago:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=-180
-If this parameter is missing, the program saves the specified number of the last minutes (see '-duration' parameter) of the livestream.
+If this parameter is missing, the program saves the specified number of the last minutes of the livestream (see '-duration' parameter).
 
 <br>**`     -duration=[minutes]     `**<br>  
 Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 60. The following example saves the last 15 minutes of the livestream:
