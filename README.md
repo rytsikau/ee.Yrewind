@@ -5,9 +5,11 @@ Yrewind is a command line program to download specified past portion of any YouT
 ### [>> download version 20.111](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.111.zip)
 
 
+
 ## Program screenshot
 
 <img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
+
 
 
 ## Quick Start
@@ -17,26 +19,33 @@ Yrewind is a command line program to download specified past portion of any YouT
 3. Save *start.bat* and run it
 
 
+
 ## Usage info
 
 The only required command line argument is the '-url':
 
-<br>**`     -url=[url]     `**<br>  
+<br>**`     -url=[url]     `**
+
 With this command, the program saves the last 1 hour of the required livestream at the highest possible resolution. URL can be specified in various formats:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
 >     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
 >     yrewind -url=9Auq9mYxFEE
->     etc.
+>     (etc.)
+
 
 Also the program has the following optional parameters:
 
-<br>**`     -resolution=[pixels]     `**<br>  
+<br>**`     -resolution=[pixels]     `**
+
 Specifies the required resolution in pixels (height). If the specified resolution is not available, the program uses the closest lower. In the following examples, the livestream will be saved at 480p:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
-If this parameter is missing, the program uses the default 1080.
 
-<br>**`     -start=[YYYYMMDD:hhmm],  -start=[Y:hhmm],  -start=[T:hhmm],  -start=-[minutes]     `**<br>  
+* If this parameter is missing, the program uses the default 1080
+
+
+<br>**`     -start=[YYYYMMDD:hhmm],  -start=[Y:hhmm],  -start=[T:hhmm],  -start=-[minutes]     `**
+
 Specifies the point in time in the past from which the stream will be saved. The value can be written in various formats. The following example saves the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
 To save the time interval from yesterday 10:15PM to 11:15PM:
@@ -45,26 +54,38 @@ To save the time interval from today 02:00AM to 03:00AM:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=T:0200
 To save the time interval from 3 hours ago to 2 hours ago:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=-180
-If this parameter is missing, the program saves the specified number of the last minutes of the livestream (see '-duration' parameter).
 
-<br>**`     -duration=[minutes]     `**<br>  
+* If this parameter is missing, the program saves the specified number of the last minutes of the livestream (see '-duration' parameter)
+
+
+<br>**`     -duration=[minutes]     `**
+
 Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 60. The following example saves the last 15 minutes of the livestream:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -duration=15
-If this parameter is missing, the program uses the default value of 60.
 
-<br>**`     -pathchrome='C:\path\to\chrome\'     `**<br>  
+* If this parameter is missing, the program uses the default value of 60
+
+
+<br>**`     -pathchrome='C:\path\to\chrome\'     `**
+
 Specifies the path to the Google Chrome browser. This parameter is required when using the portable version of Chrome.
 
-<br>**`     -pathffmpeg='C:\path\to\ffmpeg\'     `**<br>  
+
+<br>**`     -pathffmpeg='C:\path\to\ffmpeg\'     `**
+
 Specifies the path to the FFmpeg library. This parameter is required if *ffmpeg.exe* is not present in the program folder.
 
-<br>**`     -pathsave='D:\path\to\save\streams\'     `**<br>  
+
+<br>**`     -pathsave='D:\path\to\save\streams\'     `**
+
 Specifies an alternate path to save streams. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
 
-<br>**`     -nocache=true     `**<br>  
+
+<br>**`     -nocache=true     `**
 This parameter disables the use of the program cache.
 
-<br>     More examples:     <br>  
+
+<br>**More examples:**
 
 To save the last 30 minutes of the stream at the highest available resolution:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -duration=30 -resolution=9999
@@ -72,6 +93,7 @@ To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at the highe
 >     yrewind -url='youtube.com/v/9Auq9mYxFEE?fs=1&rel=0' -start=Y:1045 -duration=15
 To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified directory:
 >     yrewind -url='9Auq9mYxFEE' -start=20200505:0455 -resolution=720 -pathsave='D:\Saved_streams\'
+
 
 
 ## Other info
@@ -83,9 +105,11 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, '-start=19990101:0000'). The program will show a warning indicating the earliest available point at the moment
 
 
+
 ## Known issues
 
 * Some livestreams (usually 60 fps) may cause the error *Cannot process livestream with FFmpeg library (code 9411)*. In this case, run the program without arguments and select option to clear the cache, or add '-nocache=true' parameter to the command line
+
 
 
 ## Requirements
@@ -93,6 +117,7 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 * FFmpeg static build (included in the archive)
 * Chrome 60 and on (installed or portable)
 * Windows 7 and on / Windows Server 2008 and on
+
 
 
 ## Tested Configuration
@@ -104,6 +129,7 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 * Windows 10 Pro x64 version 1903
 
 
+
 ## Developer info
 
 * C#
@@ -111,9 +137,11 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 * Visual Studio Community 2019
 
 
+
 ## Tags
 
 youtube-live-stream-download youtube-live-stream-record youtube-live-stream-save youtube-livestream-download youtube-livestream-record youtube-livestream-save
+
 
 
 ## Author
