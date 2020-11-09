@@ -48,10 +48,13 @@ Specifies the required resolution in pixels (height). If the specified resolutio
 
 Specifies the point in time in the past from which the stream will be saved. The value can be written in various formats. The following example saves the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
+
 To save the time interval from yesterday 10:15PM to 11:15PM:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=Y:2215
+
 To save the time interval from today 02:00AM to 03:00AM:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=T:0200
+
 To save the time interval from 3 hours ago to 2 hours ago:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -start=-180
 
@@ -90,8 +93,10 @@ This parameter disables the use of the program cache.
 
 To save the last 30 minutes of the stream at the highest available resolution:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -duration=30 -resolution=9999
+
 To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at the highest available resolution:
 >     yrewind -url='youtube.com/v/9Auq9mYxFEE?fs=1&rel=0' -start=Y:1045 -duration=15
+
 To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified directory:
 >     yrewind -url='9Auq9mYxFEE' -start=20200505:0455 -resolution=720 -pathsave='D:\Saved_streams\'
 
