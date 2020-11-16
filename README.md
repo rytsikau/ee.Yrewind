@@ -66,7 +66,7 @@ To save the time interval from 3 hours ago to 2 hours ago:
 
 <br>**` -duration=[minutes] `**
 
-Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 75. The following example saves the last 15 minutes of the livestream:
+Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 60. The following example saves the last 15 minutes of the livestream:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE' -duration=15
 
 * If this parameter is missing, the program uses the default value of 60
