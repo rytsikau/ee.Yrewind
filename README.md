@@ -2,7 +2,6 @@
 
 Yrewind is a command line program to save any YouTube live stream as a video file. The program allows you to both record in real time and download the specified past part of the stream. Please note that the program can only save videos when streaming is active, and is not intended to download old recorded live streams as well as regular YouTube videos.
 
-***Attention! Changed the default behavior of the program: now, if the '-start' parameter is missing, the program runs in 'real-time' recording mode, saving the FOLLOWING minutes of the stream (not the previous ones)***
 ### [>> download version 20.113](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.113.zip)<br><br><br>
 
 
