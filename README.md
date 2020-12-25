@@ -105,7 +105,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at 480p resolu
 
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if the internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour
 * The maximum resolution supported by the program is 1080p
-* The reference point for all parameters is the local time when the program started: *--> ee.Yrewind (started at ...)*
+* The reference point for the *-start* parameter is the local time when the program started: *--> ee.Yrewind (started at ...)*
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, *-start=19990101:0000*). The program will show a warning indicating the earliest available point at the moment
 
 
