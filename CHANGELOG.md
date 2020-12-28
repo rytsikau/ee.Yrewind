@@ -25,13 +25,13 @@
 
 ### Removed
 
-- Removed *sync warning* in file name if duration does not match specified (now program just leaves temp file name)
+- Removed *sync warning* in file name if duration does not match specified. Now program just leaves temp file name.
 
 ## [20.121] - 2020-12-10
 
 ### Fixed
 
-- Fixed an issue where some streams could not be downloaded due to error *9411 Cannot process live stream with FFmpeg library*.
+- Fixed an issue where some streams could not be downloaded due to an error 9411 (*Cannot process live stream with FFmpeg library*).
 - Several minor fixes.
 
 ## [20.113] - 2020-11-28
@@ -42,9 +42,10 @@
 
 ### Changed
 
-- If the `-start` parameter is missing, the program now runs in *real time* recording mode, saving the following 1 hour of the stream (not the previous ones)
-- Improved speed of receiving information about the required live stream.
-- Increased the maximum allowed video duration (again).
+- If the `-start` parameter is missing, the program now runs in *real time* recording mode, saving the *following* 1 hour of the stream, not the previous ones.
+- Improved speed of caching information about the required live stream.
+- Increased the maximum allowed video duration (up to 90 minites).
+
 
 ### Fixed
 
@@ -59,7 +60,7 @@
 
 ### Changed
 
-- Increased the maximum allowed video duration.
+- Increased the maximum allowed video duration (up to 75 minites).
 
 ### Fixed
 
@@ -84,7 +85,7 @@
 
 ### Fixed
 
-- Fixed error *9124 FFmpeg not found* if *bat* file was located in a different directory than program.
+- Fixed an error 9124 (*FFmpeg not found*) if *bat* file was located in a different directory than program.
 - Several minor fixes.
 
 ## [20.104] - 2020-10-13
@@ -114,10 +115,8 @@
 ### Added
 
 - Added check for other instances of the program is running.
-- Added deletion of empty directories created by the current instance of the program (for example, if the video was not downloaded).
 - Added determining of the earliest available live stream time point.
-- Added search for the first available time point of a live stream.
-- Added the ability to cache live stream info to improve save speed.
+- Added the ability to cache live stream information to improve save speed.
 
 ### Changed
 
@@ -126,6 +125,7 @@
 
 ### Fixed
 
+- Fixed a bug when empty directories created by the current instance of the program (for example, if the video did not downloaded) were not deleted.
 - Fixed a bug causing the duration of some videos to be several seconds longer than the specified one.
 - Several minor fixes.
 
@@ -164,9 +164,8 @@
 
 ### Added
 
-- Added a preliminary check if there is a live stream or regular video at the specified URL.
-- Added built-in help system.
-- Added line showing download progress.
+- Added a function showing download progress.
+- Added built-in help system (readme file).
 - Added live stream title parsing.
 - Added video type recognition (live stream or regular video).
 - Video is now first saved under a temporary file name to prevent overwriting in case of an error.
