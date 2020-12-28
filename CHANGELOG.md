@@ -165,7 +165,7 @@
 ### Added
 
 - Added a function showing download progress.
-- Added built-in help system (readme file).
+- Added built-in help system (with contents of *readme* file).
 - Added live stream title parsing.
 - Added video type recognition (live stream or regular video).
 - Video is now first saved under a temporary file name to prevent overwriting in case of an error.
