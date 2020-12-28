@@ -1,6 +1,6 @@
 # ee.Yrewind
 
-Yrewind is a command line program to save any YouTube live stream as a video file. The program can both record a stream in real time and download it, starting from a specified moment in the past. Also, Yrewind allows to set the required duration and resolution. Please note that the program can only save videos when streaming is active, and is not intended to download old recorded streams as well as regular YouTube videos.
+Yrewind is a command line program to save YouTube live stream as a video file. The program can both record a stream in real time and download it, starting from a specified moment in the past. Also, Yrewind allows to set the required duration and resolution. Please note that the program can only save videos when streaming is active, and is not intended to download old recorded streams as well as regular YouTube videos.
 
 ### [>> download version 20.123](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.123.zip)
 For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md)<br><br>
@@ -113,7 +113,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at 480p resolu
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if the internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour
 * The reference point for the `-start` parameter is the local time when the program started: *--> ee.Yrewind (started at ...)*
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=19990101:0000`). The program will show a warning indicating the earliest available point at the moment
-* To prevent video file corruption due to network errors or FFmpeg crashes, use `ts` container to save video: `-vformat=ts` (unfortunately it does not currently support resolutions higher than 1080p and embedded metadata)
+* To prevent video file corruption due to network errors or FFmpeg crashes, use `ts` container to save video: `-vformat=ts` (it does not currently support resolutions higher than 1080p and embedded metadata)
 
 
 <br>
