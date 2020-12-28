@@ -1,8 +1,9 @@
 # ee.Yrewind
 
-*Yrewind* is a command line program to save any YouTube live stream as a video file. The program can both record a stream in real time and download it, starting from a specified moment in the past. Also, *Yrewind* allows to set the required duration and resolution. Please note that the program can only save videos when streaming is active, and is not intended to download old recorded streams as well as regular YouTube videos.
+Yrewind is a command line program to save any YouTube live stream as a video file. The program can both record a stream in real time and download it, starting from a specified moment in the past. Also, Yrewind allows to set the required duration and resolution. Please note that the program can only save videos when streaming is active, and is not intended to download old recorded streams as well as regular YouTube videos.
 
-### [>> download version 20.122](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.122.zip)<br><br>
+### [>> download version 20.123](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.123.zip)
+For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.SOURCE_Yrewind/blob/main/CHANGELOG.md)<br><br>
 
 
 <br>
@@ -28,7 +29,7 @@
 
 ## Usage info
 
-**The only required command line argument is the '-url':**
+**The only required command line argument is the `-url`:**
 
 **` -url=[url] `**
 
@@ -39,7 +40,7 @@ With this command, the program runs in real time mode, recording the livestream 
 >     (etc.)
 
 
-<br>**To enable rewind, use '-start' parameter:**
+<br>**To enable rewind, use `-start` parameter:**
 
 **` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes] `**
 
@@ -64,11 +65,17 @@ Specifies the required duration in minutes. The minimum value is 1, the maximum 
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=15
 
 
-<br>**` -resolution=[pixels] `**
+<br>**` -resolution=[heightPixels] `**
 
 Specifies the required resolution in pixels (height). If the specified resolution is not available, the program uses the closest lower. If this parameter is missing, the program uses the default 1080. In the examples below, the livestream will be saved at 480p:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
+
+
+<br>**` -vformat=[formatExtension] `**
+
+Sets the required format (container) for the saved video. By default, program uses `mp4`:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -vformat=ts
 
 
 <br>**` -pathchrome='C:\path\to\chrome\' `**
@@ -104,9 +111,9 @@ To save 90 minutes of the stream, starting from half an hour ago, at 480p resolu
 ## Other info
 
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if the internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour
-* The maximum resolution supported by the program is 1080p
-* The reference point for *-start* parameter is the local time when the program started: *--> ee.Yrewind (started at ...)*
-* To determine the earliest available point, try download the knowingly unavailable time interval (for example, *-start=19990101:0000*). The program will show a warning indicating the earliest available point at the moment
+* The reference point for the `-start` parameter is the local time when the program started: *--> ee.Yrewind (started at ...)*
+* To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=19990101:0000`). The program will show a warning indicating the earliest available point at the moment
+* To prevent video file corruption due to network errors or FFmpeg crashes, use `ts` container to save video: `-vformat=ts` (unfortunately it does not currently support resolutions higher than 1080p and embedded metadata)
 
 
 <br>
