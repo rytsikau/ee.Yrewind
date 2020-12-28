@@ -1,5 +1,16 @@
 # Changelog
 
+## [20.123] - 2020-12-28
+
+### Added
+
+- Added parameter `-vformat=[formatExtension]`.
+- Added support for resolutions higher than 1080p.
+
+### Fixed
+
+- Several minor fixes.
+
 ## [20.122] - 2020-12-25
 
 ### Changed
