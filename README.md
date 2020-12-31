@@ -2,7 +2,7 @@
 
 Yrewind is a command line program to save YouTube live stream as a video file. The program can both record a stream in real time and download it, starting from a specified moment in the past. Also, Yrewind allows to set the required duration and resolution. Please note that the program can only save videos when streaming is active, and is not intended to download old recorded streams as well as regular YouTube videos.
 
-### [>> download version 20.123](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.123.zip)
+### [>> download version 20.124](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.124.zip)
 For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md)<br><br>
 
 
@@ -44,7 +44,7 @@ With this command, the program runs in real time mode, recording the livestream 
 
 **` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes] `**
 
-The parameter specifies the point in time in the past from which the stream will be saved. It can be written in various formats. For example, to save the time interval from 7:10AM to 8:10AM on July 15, 2020:
+The parameter specifies the point in time in the past from which the stream will be saved. If this parameter is missing, the program records a live stream in real time, starting from the moment the program starts. The parameter can be written in various formats. For example, to save the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
 
 To save the time interval from yesterday 10:15PM to 11:15PM:
@@ -61,36 +61,31 @@ To save the time interval from 3 hours ago to 2 hours ago:
 
 **` -duration=[minutes] `**
 
-Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 90. If this parameter is missing, the program uses the default value of 60. The example below saves 15 minutes of the livestream:
+Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 90. If this parameter is missing, the program uses the default `60`. The example below saves 15 minutes of the livestream:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=15
 
 
 <br>**` -resolution=[heightPixels] `**
 
-Specifies the required resolution in pixels (height). If the specified resolution is not available, the program uses the closest lower. If this parameter is missing, the program uses the default 1080. In the examples below, the livestream will be saved at 480p:
+Specifies the required resolution in pixels (height). If this parameter is missing, the program uses the default `1080`. If the required resolution is not available, the program uses the nearest lower. In the examples below, the livestream will be saved at 480p:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
 
 
 <br>**` -vformat=[formatExtension] `**
 
-Sets the required format (container) for the saved video. By default, program uses `mp4`:
+Specifies the required format (container) for the saved video. If this parameter is missing, the program uses the default `mp4`:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -vformat=ts
-
-
-<br>**` -pathchrome='C:\path\to\chrome\' `**
-
-Specifies the path to the Google Chrome browser. This parameter is required when using the portable version of Chrome.
 
 
 <br>**` -pathffmpeg='C:\path\to\ffmpeg\' `**
 
-Specifies the path to the FFmpeg library. This parameter is required if *ffmpeg.exe* is not present in the program folder.
+Specifies the path to the FFmpeg library. If this parameter is missing, the program uses FFmpeg located in the program folder.
 
 
 <br>**` -pathsave='D:\path\to\save\streams\' `**
 
-Specifies an alternate path to save streams. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
+Specifies an alternate path to save the live stream. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
 
 
 <br>**More examples:**
@@ -122,7 +117,6 @@ To save 90 minutes of the stream, starting from half an hour ago, at 480p resolu
 ## Requirements
 
 * FFmpeg static build (included in the archive)
-* Chrome 60 and on (installed or portable)
 * Windows 7 and on / Windows Server 2008 and on
 
 
@@ -132,8 +126,6 @@ To save 90 minutes of the stream, starting from half an hour ago, at 480p resolu
 ## Tested Configuration
 
 * FFmpeg 4.3 x86 (by Zeranoe)
-* Chrome 62 x86 (portable)
-* Chrome 83 x64 (installed)
 * Windows 10 Pro x32 version 1909
 * Windows 10 Pro x64 version 1903
 
