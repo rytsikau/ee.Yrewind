@@ -1,5 +1,19 @@
 # Changelog
 
+## [20.124] - 2020-12-31
+
+### Changed
+
+- The speed of receiving information about live stream has been increased.
+
+### Fixed
+
+- Several minor fixes.
+
+### Removed
+
+- Removed dependency on Google Chrome. Now the browser is not required for the program to work.
+
 ## [20.123] - 2020-12-28
 
 ### Added
@@ -182,5 +196,6 @@
 
 - Basic functionality developed.
 
+[20.124]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.124.zip
 [20.123]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.123.zip
 [20.122]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.122.zip
