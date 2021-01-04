@@ -41,7 +41,7 @@ Also, Yrewind allows to set the required duration, resolution and media format. 
 
 ##### [**` -url=[url] `**](#)
 
-With this command, the program runs in real time mode, recording the livestream for 1 hour at 1080p resolution (or at a lower if 1080p is not available). URL can be specified in various formats:
+With this command, the program records a livestream in real time for 1 hour at 1080p resolution (or at a lower if 1080p is not available). URL can be specified in various formats:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
 >     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
 >     yrewind -url=9Auq9mYxFEE
@@ -53,7 +53,7 @@ With this command, the program runs in real time mode, recording the livestream 
 
 ##### [**` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes], -start=beginning, -start=wait `**](#)
 
-The parameter specifies the point in time in the past from which the stream will be saved. If this parameter is missing, the program records a live stream in real time, starting from the moment the program starts.
+The parameter specifies the point in time in the past from which the stream will be saved. If this parameter is missing, the program records a livestream in real time, starting from the moment the program starts.
 
 To save the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
@@ -70,7 +70,7 @@ To save the time interval from 3 hours ago to 2 hours ago:
 To save the time interval from the first currently available minute:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=beginning
 
-To save the scheduled (not currently active) live stream from the first second when it starts:
+To save the scheduled (not currently active) livestream from the first second when it starts:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=wait
 
 <br>
@@ -107,27 +107,27 @@ Specifies the path to the FFmpeg library. If this parameter is missing, the prog
 
 ##### [**` -pathsave='D:\path\to\save\streams\' `**](#)
 
-Specifies an alternate path to save the live stream. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
+Specifies an alternate path to save the livestream. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
 
 <br>
 
 **More examples:**
 
-To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at the highest available resolution:
+To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at 1080p:
 >     yrewind -url='youtube.com/v/9Auq9mYxFEE?fs=1&rel=0' -start=Y:1045 -duration=15
 
 To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified directory:
 >     yrewind -url=9Auq9mYxFEE -start=20200505:0455 -resolution=720 -pathsave='D:\Saved_streams\'
 
-To save 90 minutes of the stream, starting from half an hour ago, at 480p resolution:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-30 -duration=90 -resolution=500
+To save 90 minutes of the stream, starting from half an hour ago, at the highest available resolution:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-30 -duration=90 -resolution=9999
 
 <br>
 
 ## Other info
 
-* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if the internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour
-* The reference point for the `-start` parameter is the local computer time when the program started (displayed on the first line)
+* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour
+* The calculated point for the `-start` parameter is the time of the local computer when the program starts (displayed in the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
 * To prevent video file corruption due to network errors or FFmpeg crashes, use `ts` container to save video: `-vformat=ts` (please note that it does not currently support resolutions higher than 1080p and embedded metadata)
 
