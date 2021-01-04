@@ -18,6 +18,7 @@
 
 ### Removed
 
+- The `-pathchrome` and `-nocache` options have been removed.
 - The limitation on running multiple copies of the program has been removed.
 
 ## [20.124] - 2020-12-31
