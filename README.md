@@ -8,8 +8,6 @@
 [ ` -pathffmpeg ` ](#-pathffmpegcpathtoffmpeg)
 [ ` -pathsave ` ](#-pathsavedpathtosavestreams)
 
-<br>
-
 Yrewind is a command line utility to save a YouTube live stream as a video file. The program has the following features:
 
 * Recording the live stream in real time
@@ -43,7 +41,7 @@ Also, Yrewind allows to set the required duration, resolution and media format. 
 
 ##### [**` -url=[url] `**](#)
 
-With this command, the program runs in real time mode, recording the livestream for 1 hour at the highest possible resolution. URL can be specified in various formats:
+With this command, the program runs in real time mode, recording the livestream for 1 hour at 1080p resolution (or at a lower if 1080p is not available). URL can be specified in various formats:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
 >     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
 >     yrewind -url=9Auq9mYxFEE
@@ -51,7 +49,7 @@ With this command, the program runs in real time mode, recording the livestream 
 
 <br>
 
-**To enable rewind or wait, use the `-start` parameter. It has several spellings:**
+**To enable rewind or waiting mode, use the `-start` parameter. It has several spellings:**
 
 ##### [**` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes], -start=beginning, -start=wait `**](#)
 
