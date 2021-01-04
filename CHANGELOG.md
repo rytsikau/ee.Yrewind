@@ -1,5 +1,25 @@
 # Changelog
 
+## [21.011] - 2021-01-04
+
+### Added
+
+- Added '-start=beginning' option to rewind the live stream to the first available moment.
+- Added '-start=wait' option to wait for the scheduled live stream to start and then automatically record it from the first second.
+
+### Changed
+
+- The built-in help of the program has become a little more convenient.
+
+### Fixed
+
+- Fixed bug with FFmpeg freezing if stream terminated during real time recording.
+- Several minor fixes.
+
+### Removed
+
+- The limitation on running multiple copies of the program has been removed.
+
 ## [20.124] - 2020-12-31
 
 ### Changed
@@ -59,7 +79,6 @@
 - If the `-start` parameter is missing, the program now runs in *real time* recording mode, saving the *following* 1 hour of the stream, not the previous ones.
 - Improved speed of caching information about the required live stream.
 - Increased the maximum allowed video duration (up to 90 minites).
-
 
 ### Fixed
 
@@ -196,6 +215,6 @@
 
 - Basic functionality developed.
 
+[21.011]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.011.zip
 [20.124]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.124.zip
 [20.123]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.123.zip
-[20.122]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.122.zip
