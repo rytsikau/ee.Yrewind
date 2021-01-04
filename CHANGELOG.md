@@ -4,8 +4,8 @@
 
 ### Added
 
-- Added '-start=beginning' option to rewind the live stream to the first available moment.
-- Added '-start=wait' option to wait for the scheduled live stream to start and then automatically record it from the first second.
+- Added `-start=beginning` option to rewind the live stream to the first available moment.
+- Added `-start=wait` option to wait for the scheduled live stream to start and then automatically record it from the first second.
 
 ### Changed
 
