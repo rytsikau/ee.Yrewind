@@ -1,21 +1,35 @@
 # ee.Yrewind
 
-Yrewind is a command line program to save YouTube live stream as a video file. The program can both record a stream in real time and download it, starting from a specified moment in the past. Also, Yrewind allows to set the required duration and resolution. Please note that the program can only save videos when streaming is active, and is not intended to download old recorded streams as well as regular YouTube videos.
-
-### [>> download version 20.124](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.124.zip)
-For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md)<br><br>
-
+[ ` -url ` ](#-urlurl)
+[ ` -start ` ](#-startyyyymmddhhmm--startyhhmm--startthhmm--start-minutes--startbeginning--startwait)
+[ ` -duration ` ](#-durationminutes)
+[ ` -resolution ` ](#-resolutionheightpixels)
+[ ` -vformat ` ](#-vformatformatextension)
+[ ` -pathffmpeg ` ](#-pathffmpegcpathtoffmpeg)
+[ ` -pathsave ` ](#-pathsavedpathtosavestreams)
 
 <br>
 
+Yrewind is a command line utility to save a YouTube live stream as a video file. The program has the following features:
+
+* Recording the live stream in real time
+* Rewinding the live stream to a specified point in the past
+* Rewinding the live stream to the first available point in the past
+* Waiting for the scheduled live stream to start and then automatically recording from the first second
+
+Also, Yrewind allows to set the required duration, resolution and media format. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
+
+<br>
+
+### [>> download version 21.011](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.011.zip)
+
+<br>
 
 ## Program screenshot
 
 <img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
 
-
 <br>
-
 
 ## Quick Start
 
@@ -23,15 +37,13 @@ For a list of changes in new version, see the [changelog](https://github.com/ryt
 2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples
 3. Save *run.bat* and run it
 
-
 <br>
-
 
 ## Usage info
 
 **The only required command line argument is the `-url`:**
 
-**` -url=[url] `**
+##### [**` -url=[url] `**](#)
 
 With this command, the program runs in real time mode, recording the livestream for 1 hour at the highest possible resolution. URL can be specified in various formats:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
@@ -39,12 +51,15 @@ With this command, the program runs in real time mode, recording the livestream 
 >     yrewind -url=9Auq9mYxFEE
 >     (etc.)
 
+<br>
 
-<br>**To enable rewind, use `-start` parameter:**
+**To enable rewind or wait, use the `-start` parameter. It has several spellings:**
 
-**` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes] `**
+##### [**` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes], -start=beginning, -start=wait `**](#)
 
-The parameter specifies the point in time in the past from which the stream will be saved. If this parameter is missing, the program records a live stream in real time, starting from the moment the program starts. The parameter can be written in various formats. For example, to save the time interval from 7:10AM to 8:10AM on July 15, 2020:
+The parameter specifies the point in time in the past from which the stream will be saved. If this parameter is missing, the program records a live stream in real time, starting from the moment the program starts.
+
+To save the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
 
 To save the time interval from yesterday 10:15PM to 11:15PM:
@@ -56,39 +71,51 @@ To save the time interval from today 02:00AM to 03:00AM:
 To save the time interval from 3 hours ago to 2 hours ago:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-180
 
+To save the time interval from the first currently available minute:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=beginning
 
-<br>**The program also has several other parameters:**
+To save the scheduled (not currently active) live stream from the first second when it starts:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=wait
 
-**` -duration=[minutes] `**
+<br>
 
-Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 90. If this parameter is missing, the program uses the default `60`. The example below saves 15 minutes of the livestream:
+**The program also has several other parameters:**
+
+##### [**` -duration=[minutes] `**](#)
+
+Specifies the required duration in minutes. The minimum value is `1`, the maximum is limited to `90`. If this parameter is missing, the program uses the default `60`. The example below saves 15 minutes of the livestream:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=15
 
+<br>
 
-<br>**` -resolution=[heightPixels] `**
+##### [**` -resolution=[heightPixels] `**](#)
 
 Specifies the required resolution in pixels (height). If this parameter is missing, the program uses the default `1080`. If the required resolution is not available, the program uses the nearest lower. In the examples below, the livestream will be saved at 480p:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 
+<br>
 
-<br>**` -vformat=[formatExtension] `**
+##### [**` -vformat=[formatExtension] `**](#)
 
-Specifies the required format (container) for the saved video. If this parameter is missing, the program uses the default `mp4`:
+Specifies the required format (media container) for the saved video. If this parameter is missing, the program uses the default `mp4`:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -vformat=ts
 
+<br>
 
-<br>**` -pathffmpeg='C:\path\to\ffmpeg\' `**
+##### [**` -pathffmpeg='C:\path\to\ffmpeg\' `**](#)
 
 Specifies the path to the FFmpeg library. If this parameter is missing, the program uses FFmpeg located in the program folder.
 
+<br>
 
-<br>**` -pathsave='D:\path\to\save\streams\' `**
+##### [**` -pathsave='D:\path\to\save\streams\' `**](#)
 
 Specifies an alternate path to save the live stream. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
 
+<br>
 
-<br>**More examples:**
+**More examples:**
 
 To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at the highest available resolution:
 >     yrewind -url='youtube.com/v/9Auq9mYxFEE?fs=1&rel=0' -start=Y:1045 -duration=15
@@ -99,29 +126,23 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 To save 90 minutes of the stream, starting from half an hour ago, at 480p resolution:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-30 -duration=90 -resolution=500
 
-
 <br>
-
 
 ## Other info
 
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if the internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour
-* The reference point for the `-start` parameter is the local time when the program started: *--> ee.Yrewind (started at ...)*
-* To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=19990101:0000`). The program will show a warning indicating the earliest available point at the moment
-* To prevent video file corruption due to network errors or FFmpeg crashes, use `ts` container to save video: `-vformat=ts` (it does not currently support resolutions higher than 1080p and embedded metadata)
-
+* The reference point for the `-start` parameter is the local computer time when the program started (displayed on the first line)
+* To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
+* To prevent video file corruption due to network errors or FFmpeg crashes, use `ts` container to save video: `-vformat=ts` (please note that it does not currently support resolutions higher than 1080p and embedded metadata)
 
 <br>
-
 
 ## Requirements
 
 * FFmpeg static build (included in the archive)
 * Windows 7 and on / Windows Server 2008 and on
 
-
 <br>
-
 
 ## Tested Configuration
 
@@ -129,9 +150,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at 480p resolu
 * Windows 10 Pro x32 version 1909
 * Windows 10 Pro x64 version 1903
 
-
 <br>
-
 
 ## Developer info
 
@@ -139,21 +158,17 @@ To save 90 minutes of the stream, starting from half an hour ago, at 480p resolu
 * .NET Framework 4.5
 * Visual Studio Community 2019
 
-
 <br>
-
 
 ## Tags
 
 download dvr live livestream record rewind save stream youtube
 
-
 <br>
-
 
 ## Author
 
-[(c) Yauheni Rytsikau, 2020](mailto:y.rytsikau@gmail.com)
+[(c) Yauheni Rytsikau, 2020-2021](mailto:y.rytsikau@gmail.com)
 
 ---
 [[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io)
