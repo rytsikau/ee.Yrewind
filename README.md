@@ -1,7 +1,7 @@
 # ee.Yrewind
 
 [ ` -url ` ](#-urlurl)
-[ ` -start ` ](#-startyyyymmddhhmm--startyhhmm--startthhmm--start-minutes--startbeginning--startwait)
+[ ` -start ` ](#-startyyyymmddhhmm--startyhhmm--startthhmm--start-minutes--startminutes--startbeginning--startwait)
 [ ` -duration ` ](#-durationminutes)
 [ ` -resolution ` ](#-resolutionheightpixels)
 [ ` -vformat ` ](#-vformatformatextension)
@@ -10,6 +10,7 @@
 
 Yrewind is a command line utility to save a YouTube live stream as a video file. The program has the following features:
 
+* Delayed start recording
 * Recording the live stream in real time
 * Rewinding the live stream to a specified point in the past
 * Rewinding the live stream to the first available point in the past
@@ -17,7 +18,7 @@ Yrewind is a command line utility to save a YouTube live stream as a video file.
 
 Also, Yrewind allows to set the required duration, resolution and media format. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
-### [>> download version 21.011](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.011.zip)
+### [>> download version 21.012](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.012.zip)
 
 <br>
 
@@ -51,26 +52,29 @@ With this command, the program records a livestream in real time for 1 hour at 1
 
 **To enable rewind or waiting mode, use the `-start` parameter. It has several spellings:**
 
-##### [**` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes], -start=beginning, -start=wait `**](#)
+##### [**` -start=[YYYYMMDD:hhmm], -start=[Y:hhmm], -start=[T:hhmm], -start=-[minutes], -start=+[minutes], -start=beginning, -start=wait `**](#)
 
-The parameter specifies the point in time in the past from which the stream will be saved. If this parameter is missing, the program records a livestream in real time, starting from the moment the program starts.
+The parameter specifies the point in time (incl. past) from which the stream will be saved. If this parameter is missing, the program records a livestream in real time, starting from the moment the program starts.
 
-To save the time interval from 7:10AM to 8:10AM on July 15, 2020:
+To download the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
 
-To save the time interval from yesterday 10:15PM to 11:15PM:
+To download the time interval from yesterday 10:15PM to 11:15PM:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=Y:2215
 
-To save the time interval from today 02:00AM to 03:00AM:
+To download the time interval from today 02:00AM to 03:00AM:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=T:0200
 
-To save the time interval from 3 hours ago to 2 hours ago:
+To download the time interval from 3 hours ago to 2 hours ago:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-180
 
-To save the time interval from the first currently available minute:
+To record 1 hour of live stream with a 2 hour delay:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=+120
+
+To download the time interval from the first currently available minute:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=beginning
 
-To save the scheduled (not currently active) livestream from the first second when it starts:
+To record the scheduled (not currently active) livestream from the first second when it starts:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=wait
 
 <br>
