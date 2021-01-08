@@ -1,5 +1,18 @@
 # Changelog
 
+## [21.012] - 2021-01-08
+
+### Added
+
+- Added `-start=+[minutes]` option for the delayed start of recording.
+- Added streamer name to video file metadata.
+- Time in filename is now with seconds.
+
+### Fixed
+
+- Fixed a bug due to which the program could not find information about the stream.
+- Several minor fixes.
+
 ## [21.011] - 2021-01-04
 
 ### Added
@@ -19,7 +32,6 @@
 ### Removed
 
 - The `-pathchrome` and `-nocache` options have been removed.
-- The limitation on running multiple copies of the program has been removed.
 
 ## [20.124] - 2020-12-31
 
@@ -216,6 +228,7 @@
 
 - Basic functionality developed.
 
+[21.012]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.012.zip
 [21.011]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.011.zip
 [20.124]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.124.zip
 [20.123]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.123.zip
