@@ -1,5 +1,22 @@
 # Changelog
 
+## [21.xxx] - 2021-xx-xx
+
+### Added
+
+- Added option `-filename=` to save live stream with custom file name (rename masks supported).
+- Added option `-start=yyyyMMdd:hhmmss` to specify starting point with seconds.
+- Added option `-url=[channel_url]` to monitor the specified channel for new live streams.
+
+### Fixed
+
+- The time in the file name now more closely matches the time of the streamer.
+- Several minor fixes.
+
+### Removed
+
+- The limitation on running multiple copies of the program has been removed.
+
 ## [21.012] - 2021-01-08
 
 ### Added
