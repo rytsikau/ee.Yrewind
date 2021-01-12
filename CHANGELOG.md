@@ -1,6 +1,6 @@
 # Changelog
 
-## [21.xxx] - 2021-xx-xx
+## [21.013] - 2021-01-12
 
 ### Added
 
@@ -12,10 +12,6 @@
 
 - The time in the file name now more closely matches the time of the streamer.
 - Several minor fixes.
-
-### Removed
-
-- The limitation on running multiple copies of the program has been removed.
 
 ## [21.012] - 2021-01-08
 
@@ -245,7 +241,6 @@
 
 - Basic functionality developed.
 
+[21.013]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.013.zip
 [21.012]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.012.zip
 [21.011]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.011.zip
-[20.124]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.124.zip
-[20.123]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_20.123.zip
