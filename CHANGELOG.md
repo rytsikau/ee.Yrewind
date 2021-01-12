@@ -4,9 +4,9 @@
 
 ### Added
 
-- Added option `-filename=` to save live stream with custom file name (rename masks supported).
+- Added option `-filename` to save live stream with custom file name (rename masks supported).
 - Added option `-start=yyyyMMdd:hhmmss` to specify starting point with seconds.
-- Added option `-url=[channel_url]` to monitor the specified channel for new live streams.
+- Added option `-url=[channelUrl]` to monitor the specified channel for new live streams.
 
 ### Fixed
 
@@ -89,7 +89,7 @@
 
 ### Removed
 
-- Removed *sync warning* in file name if duration does not match specified. Now program just leaves temp file name.
+- Removed sync warning in file name if duration does not match specified. Now program just leaves temp file name.
 
 ## [20.121] - 2020-12-10
 
@@ -106,7 +106,7 @@
 
 ### Changed
 
-- If the `-start` parameter is missing, the program now runs in *real time* recording mode, saving the *following* 1 hour of the stream, not the previous ones.
+- If the `-start` parameter is missing, the program now runs in real time recording mode, saving the *following* 1 hour of the stream, not the previous ones.
 - Improved speed of caching information about the required live stream.
 - Increased the maximum allowed video duration (up to 90 minites).
 
