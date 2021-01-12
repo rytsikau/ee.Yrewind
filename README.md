@@ -1,5 +1,14 @@
 # ee.Yrewind
 
+[ ` -url ` ](#-urlurl)
+[ ` -start ` ](#-startyyyymmddhhmm--startyyyymmddhhmmss)
+[ ` -duration ` ](#-durationminutes)
+[ ` -resolution ` ](#-resolutionheightpixels)
+[ ` -vformat ` ](#-vformatformatextension)
+[ ` -pathffmpeg ` ](#-pathffmpegcpathtoffmpeg)
+[ ` -pathsave ` ](#-pathsavedpathtosavestreams)
+[ ` -filename ` ](#-filenamefilenamewithoutextension)
+
 Yrewind is a command line utility to save a YouTube live stream as a video file. The program has the following features:
 
 * Delayed start recording
@@ -13,13 +22,13 @@ Also, Yrewind allows to set the required duration, resolution and media format. 
 
 ### [>> download version 21.013](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.013.zip)
 
-
+<br>
 
 ## Program screenshot
 
 <img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
 
-
+<br>
 
 ## Quick Start
 
@@ -27,13 +36,13 @@ Also, Yrewind allows to set the required duration, resolution and media format. 
 2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples
 3. Save *run.bat* and run it
 
-
+<br>
 
 ## Usage info
 
 The only required command line argument is the `-url`:
 
--url=[url]
+##### [**` -url=[url] `**](#)
 
 With this command, the program records a livestream in real time for 1 hour at 1080p resolution (or at a lower if 1080p is not available). URL can be specified in various formats:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
@@ -47,14 +56,14 @@ You can also specify a channel URL (along with parameter `-start=wait`) to autom
 >     yrewind -url='youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ' -start=wait
 >     yrewind -url=UCoMdktPbSTixAyNGwb-UYkQ -start=wait
 
-
+<br>
 
 To rewind the livestream or delay the start, use the `-start` parameter. It has several spellings:
 
--start=[YYYYMMDD:hhmm], -start=[YYYYMMDD:hhmmss]
--start=[Y:hhmm], -start=[T:hhmm]
--start=-[minutes], -start=+[minutes]
--start=beginning, -start=wait
+##### [**` -start=[YYYYMMDD:hhmm], -start=[YYYYMMDD:hhmmss] `**](#)
+##### [**` -start=[Y:hhmm], -start=[T:hhmm] `**](#)
+##### [**` -start=-[minutes], -start=+[minutes] `**](#)
+##### [**` -start=beginning, -start=wait `**](#)
 
 The parameter specifies the point in time from which the stream will be saved. If this parameter is missing, the program records a livestream in real time, starting from the moment the program starts.
 
@@ -79,50 +88,50 @@ To download the time interval from the first currently available moment:
 To record the scheduled (not currently active) livestream from the first second when it starts:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=wait
 
-
+<br>
 
 The program also has several other parameters:
 
--duration=[minutes]
+##### [**` -duration=[minutes] `**](#)
 
 Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 90. If this parameter is missing, the program uses the default 60. The example below saves 15 minutes of the livestream:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=15
 
+<br>
 
-
--resolution=[heightPixels]
+##### [**` -resolution=[heightPixels] `**](#)
 
 Specifies the required resolution in pixels (height). If this parameter is missing, the program uses the default 1080. If the required resolution is not available, the program uses the nearest lower. In the examples below, the livestream will be saved at 480p:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 
+<br>
 
-
--vformat=[formatExtension]
+##### [**` -vformat=[formatExtension] `**](#)
 
 Specifies the required format (media container) for the saved video. If this parameter is missing, the program uses the default MP4.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -vformat=ts
 
+<br>
 
-
--pathffmpeg='C:\path\to\ffmpeg\'
+##### [**` -pathffmpeg='C:\path\to\ffmpeg\' `**](#)
 
 Specifies the path to the FFmpeg library. If this parameter is missing, the program uses FFmpeg located in the program folder.
 
+<br>
 
-
--pathsave='D:\path\to\save\streams\'
+##### [**` -pathsave='D:\path\to\save\streams\' `**](#)
 
 Specifies an alternate path to save the livestream. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
 
+<br>
 
-
--filename=[filenameWithoutExtension]
+##### [**` -filename=[filenameWithoutExtension] `**](#)
 
 Specifies an alternate filename to save the livestream. If this parameter is missing, the program saves the video with name like *9Auq9mYxFEE_20210111-185830_60m_1080p*. Alternate filename supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*`, `*duration*`, `*resolution*`, `*author*`, `*title*`, `*channel_id*` (string `customDateTime` recognizes letters yyyyMMddHHmmss). The example below saves the livestream with name *Sky News - Watch Sky News live (2021-01-12).mp4*:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -filename='*author* - *title* (*start[yyyy-MM-dd]*)'
 
-
+<br>
 
 More examples:
 
@@ -135,7 +144,7 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 To save 90 minutes of the stream, starting from half an hour ago, at the highest available resolution:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-30 -duration=90 -resolution=9999
 
-
+<br>
 
 ## Other info
 
@@ -144,14 +153,14 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
 * To prevent video file corruption due to network errors or FFmpeg crashes, use TS container to save video (`-vformat=ts`). Please note that it does not currently support resolutions higher than 1080p and embedded metadata
 
-
+<br>
 
 ## Requirements
 
 * FFmpeg static build (included in the archive)
 * Windows 7 and on / Windows Server 2008 and on
 
-
+<br>
 
 ## Tested Configuration
 
@@ -159,7 +168,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * Windows 10 Pro x32 version 1909
 * Windows 10 Pro x64 version 1903
 
-
+<br>
 
 ## Developer info
 
@@ -167,13 +176,13 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * .NET Framework 4.5
 * Visual Studio Community 2019
 
-
+<br>
 
 ## Tags
 
 download dvr live livestream record rewind save stream youtube
 
-
+<br>
 
 ## Author
 
