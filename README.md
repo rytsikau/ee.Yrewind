@@ -128,7 +128,7 @@ Specifies an alternate path to save the livestream. If this parameter is missing
 
 ##### [**` -filename=[filenameWithoutExtension] `**](#)
 
-Specifies an alternate filename to save the livestream. If this parameter is missing, the program saves the video with name like *9Auq9mYxFEE_20210111-185830_60m_1080p*. Alternate filename supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*`, `*duration*`, `*resolution*`, `*author*`, `*title*`, `*channel_id*` (string `customDateTime` recognizes letters yyyyMMddHHmmss). The example below saves the livestream with name *Sky News - Watch Sky News live (2021-01-12).mp4*:
+Specifies an alternate filename to save the livestream. If this parameter is missing, the program saves the video with name like *9Auq9mYxFEE_20210111-185830_60m_1080p*. Alternate filename supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*`, `*duration*`, `*resolution*`, `*author*`, `*title*`, `*channel_id*`. String `customDateTime` recognizes letters yyyyMMddHHmmss. The example below saves the livestream with name *Sky News - Watch Sky News live (2021-01-12)*:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -filename='*author* - *title* (*start[yyyy-MM-dd]*)'
 
 <br>
@@ -148,10 +148,10 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 ## Other info
 
-* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour
+* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error
 * The calculated point for the `-start` parameter is the time of the local computer when the program starts (displayed in the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
-* To prevent video file corruption due to network errors or FFmpeg crashes, use TS container to save video (`-vformat=ts`). Please note that it does not currently support resolutions higher than 1080p and embedded metadata
+* To prevent video file corruption due to network errors or software crashes, use TS container to save video (`-vformat=ts`). Please note that it does not currently support resolutions higher than 1080p and embedded metadata
 
 <br>
 
@@ -166,7 +166,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 * FFmpeg 4.3 x86 (by Zeranoe)
 * Windows 10 Pro x32 version 1909
-* Windows 10 Pro x64 version 1903
+* Windows 10 Pro x64 version 1909
 
 <br>
 
