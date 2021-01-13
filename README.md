@@ -18,7 +18,7 @@ Yrewind is a command line utility to save a YouTube live stream as a video file.
 * Waiting for the scheduled live stream to start and then automatically recording from the first second
 * Monitoring the specified channel for new live streams and then automatically recording from the first second
 
-Also, Yrewind allows to set the required duration, resolution and media format. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
+Yrewind also allows to set the required duration, resolution and media format. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
 ### [>> download version 21.013](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.013.zip)
 
@@ -50,7 +50,7 @@ With this command, the program records a livestream in real time for 1 hour at 1
 >     yrewind -url=9Auq9mYxFEE
 >     (etc.)
 
-You can also specify a channel URL (along with parameter `-start=wait`) to automatically record a livestream if its URL and start time are unknown. Please note that when specifying a channel URL, active livestreams on the channel are ignored, the program will wait for a new one to start.
+You can also specify a channel URL (along with parameter `-start=wait`) to automatically record a livestream if its URL (ID) and start time are unknown. Please note that when specifying a channel URL, active livestreams on the channel are ignored, the program will wait for a new one to start.
 >     yrewind -url='https://www.youtube.com/c/SkyNews' -start=wait
 >     yrewind -url=www.youtube.com/user/SkyNews/ -start=wait
 >     yrewind -url='youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ' -start=wait
@@ -101,15 +101,16 @@ Specifies the required duration in minutes. The minimum value is 1, the maximum 
 
 ##### [**` -resolution=[heightPixels] `**](#)
 
-Specifies the required resolution in pixels (height). If this parameter is missing, the program uses the default 1080. If the required resolution is not available, the program uses the nearest lower. In the examples below, the livestream will be saved at 480p:
+
+Specifies the required resolution in pixels (height). If this parameter is missing, the program uses the default 1080. If the resolution is not available, the program uses the nearest lower. In the examples below, the livestream will be saved at 480p:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 
 <br>
 
-##### [**` -vformat=[formatExtension] `**](#)
+##### [**` -vformat=[mediaContainerExtension] `**](#)
 
-Specifies the required format (media container) for the saved video. If this parameter is missing, the program uses the default MP4.
+Specifies the required media container for the saved video. If this parameter is missing, the program uses the default MP4.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -vformat=ts
 
 <br>
