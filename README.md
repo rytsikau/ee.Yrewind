@@ -183,11 +183,5 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 download dvr live livestream record rewind save stream youtube
 
-<br>
-
-## Author
-
-[(c) Yauheni Rytsikau, 2020-2021](mailto:y.rytsikau@gmail.com)
-
 ---
-[[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io)
+[[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io) [[author e-mail]](mailto:y.rytsikau@gmail.com)
