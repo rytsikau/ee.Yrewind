@@ -20,7 +20,7 @@ Yrewind is a command line utility to save a YouTube live stream as a video file.
 
 Yrewind also allows to set the required duration, resolution and media format. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
-### [>> download version 21.013](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.013.zip)
+### [>> download version 21.014](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.014.zip)
 
 <br>
 
@@ -50,7 +50,7 @@ With this command, the program records a livestream in real time for 1 hour at 1
 >     yrewind -url=9Auq9mYxFEE
 >     (etc.)
 
-You can also specify a channel URL (along with parameter `-start=wait`) to automatically record a livestream if its URL (ID) and start time are unknown. Please note that when specifying a channel URL, active livestreams on the channel are ignored, the program will wait for a new one to start.
+You can also specify a channel URL (along with parameter `-start=wait`) to automatically record if livestream URL and start time are unknown. Please note that when specifying a channel URL, active livestreams on the channel are ignored, the program will wait for a new one to start.
 >     yrewind -url='https://www.youtube.com/c/SkyNews' -start=wait
 >     yrewind -url=www.youtube.com/user/SkyNews/ -start=wait
 >     yrewind -url='youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ' -start=wait
@@ -123,13 +123,13 @@ Specifies the path to the FFmpeg library. If this parameter is missing, the prog
 
 ##### [**` -pathsave='D:\path\to\save\streams\' `**](#)
 
-Specifies an alternate path to save the livestream. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
+Specifies a custom path for saving livestream. If this parameter is missing, the program saves the video to the directory where the batch file is located (or from which the command line is launched).
 
 <br>
 
 ##### [**` -filename=[filenameWithoutExtension] `**](#)
 
-Specifies an alternate filename to save the livestream. If this parameter is missing, the program saves the video with name like *9Auq9mYxFEE_20210111-185830_60m_1080p*. Alternate filename supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*`, `*duration*`, `*resolution*`, `*author*`, `*title*`, `*channel_id*`. String `customDateTime` recognizes letters yyyyMMddHHmmss. The example below saves the livestream with name *Sky News - Watch Sky News live (2021-01-12)*:
+Specifies a custom filename to save the livestream. If this parameter is missing, the program saves the video with name like *9Auq9mYxFEE_20210111-185830_60m_1080p*. Alternate filename supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*`, `*duration*`, `*resolution*`, `*author*`, `*title*`, `*channel_id*`. String `customDateTime` recognizes letters yyyyMMddHHmmss. The example below saves the livestream with name *Sky News - Watch Sky News live (2021-01-12)*:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -filename='*author* - *title* (*start[yyyy-MM-dd]*)'
 
 <br>
@@ -153,6 +153,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * The calculated point for the `-start` parameter is the time of the local computer when the program starts (displayed in the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
 * To prevent video file corruption due to network errors or software crashes, use TS container to save video (`-vformat=ts`). Please note that it does not currently support resolutions higher than 1080p and embedded metadata
+* With the option `-start=beginning` sometimes an incomplete file is saved. In this case, set the `-start` value manually for a few minutes later (for example, `-start=20200715:0710`)
 
 <br>
 
