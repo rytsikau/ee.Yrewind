@@ -1,5 +1,11 @@
 # Changelog
 
+## [21.014] - 2021-01-17
+
+### Fixed
+
+- Several minor fixes.
+
 ## [21.013] - 2021-01-12
 
 ### Added
@@ -241,6 +247,6 @@
 
 - Basic functionality developed.
 
+[21.014]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.014.zip
 [21.013]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.013.zip
 [21.012]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.012.zip
-[21.011]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.011.zip
