@@ -4,7 +4,7 @@
 [ ` -start ` ](#-startyyyymmddhhmm--startyyyymmddhhmmss)
 [ ` -duration ` ](#-durationminutes)
 [ ` -resolution ` ](#-resolutionheightpixels)
-[ ` -vformat ` ](#-vformatformatextension)
+[ ` -vformat ` ](#-vformatmediacontainerextension)
 [ ` -pathffmpeg ` ](#-pathffmpegcpathtoffmpeg)
 [ ` -pathsave ` ](#-pathsavedpathtosavestreams)
 [ ` -filename ` ](#-filenamefilenamewithoutextension)
