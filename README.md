@@ -9,7 +9,7 @@
 [ ` -pathsave ` ](#-pathsavedpathtosavestreams)
 [ ` -filename ` ](#-filenamefilenamewithoutextension)
 
-Yrewind is a command line utility to save a YouTube live stream in its original quality. The program has the following features:
+Yrewind is a command line utility to save YouTube live stream in its original quality. The program has the following features:
 
 * Delayed start recording
 * Recording the live stream in real time
