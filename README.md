@@ -9,7 +9,7 @@
 [ ` -pathsave ` ](#-pathsavedpathtosavestreams)
 [ ` -filename ` ](#-filenamefilenamewithoutextension)
 
-Yrewind is a command line utility to save a YouTube live stream as a video file. The program has the following features:
+Yrewind is a command line utility to save a YouTube live stream in its original quality. The program has the following features:
 
 * Delayed start recording
 * Recording the live stream in real time
@@ -79,7 +79,7 @@ To download the time interval from today 02:00AM to 03:00AM:
 To download the time interval from 3 hours ago to 2 hours ago:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-180
 
-To record 1 hour of live stream with a 2 hour delay:
+To record 1 hour of livestream with a 2 hour delay:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=+120
 
 To download the time interval from the first currently available moment:
