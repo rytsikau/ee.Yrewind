@@ -1,5 +1,11 @@
 # Changelog
 
+## [21.015] - 2021-01-27
+
+### Changed
+
+- Increased the maximum allowed video duration (up to 300 minites).
+
 ## [21.014] - 2021-01-17
 
 ### Fixed
@@ -247,6 +253,6 @@
 
 - Basic functionality developed.
 
-[21.014]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.014.zip
-[21.013]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.013.zip
-[21.012]: https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.012.zip
+[21.015]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210127/ee.yrewind_21.015.zip
+[21.014]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210117/ee.yrewind_21.014.zip
+[21.013]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210112/ee.yrewind_21.013.zip
