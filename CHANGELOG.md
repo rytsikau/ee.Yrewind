@@ -4,7 +4,7 @@
 
 ### Changed
 
-- Increased the maximum allowed video duration (up to 300 minites).
+- Increased the maximum allowed video duration (up to 300 minutes).
 
 ## [21.014] - 2021-01-17
 
@@ -116,7 +116,7 @@
 
 - If the `-start` parameter is missing, the program now runs in real time recording mode, saving the *following* 1 hour of the stream, not the previous ones.
 - Improved speed of caching information about the required live stream.
-- Increased the maximum allowed video duration (up to 90 minites).
+- Increased the maximum allowed video duration (up to 90 minutes).
 
 ### Fixed
 
@@ -131,7 +131,7 @@
 
 ### Changed
 
-- Increased the maximum allowed video duration (up to 75 minites).
+- Increased the maximum allowed video duration (up to 75 minutes).
 
 ### Fixed
 
