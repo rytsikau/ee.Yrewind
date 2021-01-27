@@ -20,7 +20,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 Yrewind also allows to set the required duration, resolution and media format. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
-### [>> download version 21.014](https://github.com/rytsikau/ee.yrewind/raw/main/ee.yrewind_21.014.zip)
+### [>> download version 21.015](https://github.com/rytsikau/ee.Yrewind/releases/download/20210127/ee.yrewind_21.015.zip)
 
 <br>
 
@@ -58,7 +58,7 @@ You can also specify a channel URL (along with parameter `-start=wait`) to autom
 
 <br>
 
-To rewind the livestream or delay the start, use the `-start` parameter. It has several spellings:
+To rewind the livestream or delay the start of recording, use the `-start` parameter. It has several spellings:
 
 ##### [**` -start=[YYYYMMDD:hhmm], -start=[YYYYMMDD:hhmmss] `**](#)
 ##### [**` -start=[Y:hhmm], -start=[T:hhmm] `**](#)
@@ -94,7 +94,7 @@ The program also has several other parameters:
 
 ##### [**` -duration=[minutes] `**](#)
 
-Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 90. If this parameter is missing, the program uses the default 60. The example below saves 15 minutes of the livestream:
+Specifies the required duration in minutes. The minimum value is 1, the maximum is limited to 300. If this parameter is missing, the program uses the default 60. The example below saves 15 minutes of the livestream:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=15
 
 <br>
@@ -152,7 +152,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the broadcast was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error
 * The calculated point for the `-start` parameter is the time of the local computer when the program starts (displayed in the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
-* To prevent video file corruption due to network errors or software crashes, use TS container to save video (`-vformat=ts`). Please note that it does not currently support resolutions higher than 1080p and embedded metadata
+* To prevent video file corruption due to network errors or software crashes, use TS container to save video (`-vformat=ts`). Please note that it does not currently support resolutions higher than 1080p and embedded metadata. It is also more reliable to download live stream as multiple video files with a relatively short duration (for example, 60 minutes) than as a single file with the maximum possible duration
 * With the option `-start=beginning` sometimes an incomplete file is saved. In this case, set the `-start` value manually for a few minutes later (for example, `-start=20200715:0710`)
 
 <br>
