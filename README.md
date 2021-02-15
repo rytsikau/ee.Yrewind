@@ -20,7 +20,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 Yrewind also allows to set the required duration, resolution and media format. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
-### [>> download version 21.015](https://github.com/rytsikau/ee.Yrewind/releases/download/20210127/ee.yrewind_21.015.zip)
+### [>> download version 21.021](https://github.com/rytsikau/ee.Yrewind/releases/download/20210215/ee.yrewind_21.021.zip)
 
 <br>
 
@@ -129,7 +129,7 @@ Specifies a custom path for saving livestream. If this parameter is missing, the
 
 ##### [**` -filename=[filenameWithoutExtension] `**](#)
 
-Specifies a custom filename to save the livestream. If this parameter is missing, the program saves the video with name like *9Auq9mYxFEE_20210111-185830_60m_1080p*. Alternate filename supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*`, `*duration*`, `*resolution*`, `*author*`, `*title*`, `*channel_id*`. String `customDateTime` recognizes letters yyyyMMddHHmmss. The example below saves the livestream with name *Sky News - Watch Sky News live (2021-01-12)*:
+Specifies a custom filename to save the livestream. If this parameter is missing, the program saves the video with name like *9Auq9mYxFEE_20210111-185830_060m_1080p*. Alternate filename supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*`, `*duration*`, `*resolution*`, `*author*`, `*title*`, `*channel_id*`. String `customDateTime` recognizes letters yyyyMMddHHmmss. The example below saves the livestream with name *Sky News - Watch Sky News live (2021-01-12)*:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -filename='*author* - *title* (*start[yyyy-MM-dd]*)'
 
 <br>
