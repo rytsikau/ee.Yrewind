@@ -1,5 +1,24 @@
 # Changelog
 
+## [21.022] - 2021-02-24
+
+### Added
+
+- Single-character aliases for all parameters (`-u` for `-url`, `-s` for `-start`, etc.).
+
+### Changed
+
+- The `-pathffmpeg` parameter has been renamed to `-ffmpeg`. The renamed parameter now supports relative paths, now you can also specify the path to *VLC Media Player* (to view the required time interval instead of saving it).
+- The `-pathsave` parameter has been renamed to `-output`. The renamed parameter now supports relative paths and rename masks for the output directory (the directory name must now end with a slash). In addition, the functionality of this parameter has been extended with the functionality of the `-filename` and `-vformat` deleted parameters.
+
+### Fixed
+
+- Several minor fixes.
+
+### Removed
+
+- The `-filename` and `-vformat` parameters (their functionality has been moved to the `-output` parameter).
+
 ## [21.021] - 2021-02-15
 
 ### Fixed
@@ -259,6 +278,6 @@
 
 - Basic functionality developed.
 
+[21.022]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210224/ee.yrewind_21.022.zip
 [21.021]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210215/ee.yrewind_21.021.zip
 [21.015]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210127/ee.yrewind_21.015.zip
-[21.014]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210117/ee.yrewind_21.014.zip
