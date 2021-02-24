@@ -107,7 +107,7 @@ Specifies the required resolution in pixels (height). If this parameter is missi
 
 ##### [**` -ffmpeg='c:\path\to\ffmpeg\' `**](#)
 
-Specifies the path to FFmpeg library. If this parameter is missing, Yrewind uses FFmpeg located in its folder. Alternatively, the path to VLC Media Player can be specified here. In this case, the requested time interval will be opened in the player instead of being saved. In the example below, Yrewind uses FFmpeg located in the specified directory:
+Specifies the path to FFmpeg library. If this parameter is missing, Yrewind uses FFmpeg located in its folder. Alternatively, the path to *VLC Media Player* can be specified here. In this case, the requested time interval will be opened in the player instead of being saved. In the example below, Yrewind uses FFmpeg located in the specified directory:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -ffmpeg='d:\FFmpeg\ffmpeg.exe'
 
 <br>
