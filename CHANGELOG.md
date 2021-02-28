@@ -1,5 +1,11 @@
 # Changelog
 
+## [21.023] - 2021-02-28
+
+### Fixed
+
+- Several minor fixes.
+
 ## [21.022] - 2021-02-24
 
 ### Added
@@ -278,6 +284,6 @@
 
 - Basic functionality developed.
 
+[21.023]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210228/ee.yrewind_21.023.zip
 [21.022]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210224/ee.yrewind_21.022.zip
 [21.021]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210215/ee.yrewind_21.021.zip
-[21.015]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210127/ee.yrewind_21.015.zip
