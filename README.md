@@ -138,13 +138,13 @@ The next example saves the livestream as *c:\downloads\Sky News\2021-01-12_12-34
 **More examples:**
 
 To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at 1080p:
->     yrewind -url='youtube.com/v/9Auq9mYxFEE?fs=1&rel=0' -start=Y:1045 -duration=15
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=Y:1045 -duration=15
 
 To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified directory:
 >     yrewind -url=9Auq9mYxFEE -start=20200505:0455 -resolution=720 -output='d:\Saved_streams\'
 
 To save 90 minutes of the stream, starting from half an hour ago, at the highest available resolution:
->     yrewind -u='https://www.youtube.com/watch?v=9Auq9mYxFEE' -s=-30 -d=90 -r=9999
+>     yrewind -u=9Auq9mYxFEE -s=-30 -d=90 -r=9999
 
 <br>
 
