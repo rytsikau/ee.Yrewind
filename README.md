@@ -18,7 +18,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 Yrewind also allows to set the required duration, resolution and media container. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
-### [>> download version 21.022](https://github.com/rytsikau/ee.Yrewind/releases/download/20210224/ee.yrewind_21.022.zip)
+### [>> download version 21.023](https://github.com/rytsikau/ee.Yrewind/releases/download/20210228/ee.yrewind_21.023.zip)
 
 <br>
 
@@ -28,7 +28,7 @@ Yrewind also allows to set the required duration, resolution and media container
 
 <br>
 
-## Quick Start
+## Quick start
 
 1. Unpack the downloaded archive
 2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples
@@ -48,7 +48,7 @@ With this command, the program records a livestream in real time for 1 hour at 1
 >     yrewind -url=9Auq9mYxFEE
 >     (etc.)
 
-You can also specify a channel URL (along with parameter `-start=wait`) to automatically record if livestream URL and start time are unknown. Please note that when specifying a channel URL, active livestreams on the channel are ignored, the program will wait for a new one to start.
+You can also specify a channel URL (along with parameter `-start=wait`) to automatically record if livestream URL and start time are unknown. Please note that when specifying a channel URL, active livestreams on the channel are ignored, the program will wait for a new one to start. The channel URL can also be specified in various formats:
 >     yrewind -url='https://www.youtube.com/c/SkyNews' -start=wait
 >     yrewind -url=www.youtube.com/user/SkyNews/ -start=wait
 >     yrewind -url='youtube.com/channel/UCoMdktPbSTixAyNGwb-UYkQ' -start=wait
@@ -63,7 +63,7 @@ To rewind the livestream or delay the start of recording, use the `-start` param
 ##### [**` -start=-[minutes], -start=+[minutes] `**](#)
 ##### [**` -start=beginning, -start=wait `**](#)
 
-The parameter specifies the point in time from which the stream will be saved. If this parameter is missing, the program records a livestream in real time, starting from the moment the program starts.
+The parameter specifies the point in time from which to save the stream. If this parameter is missing, the program records a livestream in real time, starting from the moment the program starts.
 
 To download the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
@@ -99,7 +99,7 @@ Specifies the required duration in minutes. The minimum value is 1, the maximum 
 
 ##### [**` -resolution=[heightPixels] `**](#)
 
-Specifies the required resolution in pixels (height). If this parameter is missing, the program uses the default 1080. If the resolution is not available, the program uses the nearest lower. In the examples below, the livestream will be saved at 480p:
+Specifies the required resolution in pixels (height). If this parameter is missing, the program uses the default 1080. If the requested resolution is not available, the program uses the nearest lower. In the examples below, the livestream will be saved at 480p:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=500
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=480
 
@@ -107,23 +107,23 @@ Specifies the required resolution in pixels (height). If this parameter is missi
 
 ##### [**` -ffmpeg='c:\path\to\ffmpeg\' `**](#)
 
-Specifies the path to FFmpeg library. If this parameter is missing, Yrewind uses FFmpeg located in its folder. Alternatively, the path to VLC Media Player can be specified here. In this case, the requested time interval will be opened in the player instead of being saved. In the example below, Yrewind uses FFmpeg located in the specified directory:
+Specifies the path to FFmpeg library. If this parameter is missing, Yrewind uses FFmpeg located in its folder. Alternatively, the path to VLC Media Player can be specified here - in this case, the requested time interval will be opened by the player instead of being saved. In the example below, Yrewind uses FFmpeg located in the specified directory:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -ffmpeg='d:\FFmpeg\'
 
 <br>
 
 ##### [**` -output='c:\dir1\dir2\filename.extension' `**](#)
 Specifies custom folder, filename and extension (media container) for the saved livestream. If this parameter is missing, the program uses the default values:
-* for folder: `[batch file folder]\saved_streams\`
-* for filename: `[id]_[date]-[time]_[duration]_[resolution]`
-* for extension (media container): `.mp4`
+* `[batch file folder]\saved_streams\` - for folder
+* `[id]_[date]-[time]_[duration]_[resolution]` - for filename
+* `.mp4` - for extension (media container)
 
 The `-output` parameter can be specified partially, then the missing parts are replaced with the default values. In this case, the part of the string to the right of the last slash is interpreted as a filename and/or extension. If a string does not contain slashes, it's fully interpreted as a filename and/or extension:
-* custom folder, default filename, default media container: `c:\dir1\dir2\`
-* custom subfolder, custom filename, default media container: `dir1\dir2\filename`
-* custom subfolder, default filename, custom media container: `dir1\.extension`
-* default folder, custom filename, default media container: `filename`
-* default folder, default filename, custom media container: `.extension`
+* `c:\dir1\dir2\` - custom folder, default filename, default media container
+* `dir1\dir2\filename` - custom subfolder, custom filename, default media container
+* `dir1\.extension` - custom subfolder, default filename, custom media container
+* `filename` - default folder, custom filename, default media container
+* `.extension` - default folder, default filename, custom media container
 
 Also the parameter supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*` (recognizes letters yyyyMMddHHmmss), `*duration*`, `*resolution*`, `*channel_id*`, `*author*` and `*title*`.
 
@@ -154,7 +154,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval, the duration of the saved file will be shorter by the total duration of those interruptions (a warning for this incompleted file will be displayed)
 * The calculated point for the `-start` parameter is the local time on computer when the program starts (displayed in the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
-* To prevent video file corruption due to network errors or software crashes, use TS container to save video (`-output=.ts`). Please note that it does not currently support resolutions higher than 1080p and embedded metadata. It is also more reliable to download live stream as multiple video files with a relatively short duration (for example, 60 minutes) than as a single file with the maximum possible duration
+* To prevent video file corruption due to network errors or software crashes, use TS container to save video (`-output=.ts`). Please note that it does not currently support embedded metadata and resolutions higher than 1080p. It is also more reliable to download live stream as multiple video files with a relatively short duration (for example, 60 minutes) than as a single file with the maximum possible duration
 * With the option `-start=beginning` sometimes an incomplete file is saved. In this case, set the `-start` value manually for a few minutes later (for example, `-start=20200715:0710`)
 
 <br>
@@ -166,7 +166,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
-## Tested Configuration
+## Tested configuration
 
 * FFmpeg 4.3 x86 (by Zeranoe)
 * Windows 10 Pro x32 version 1909
