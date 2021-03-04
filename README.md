@@ -11,18 +11,18 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 * Delayed start recording
 * Recording the live stream in real time
-* Rewinding the live stream to a specified point in the past
+* Rewinding the live stream to specified point in the past
 * Rewinding the live stream to the first available point in the past
 * Waiting for the scheduled live stream to start and then automatically recording from the first second
 * Monitoring the specified channel for new live streams and then automatically recording from the first second
 
-Yrewind also allows to set the required duration, resolution and media container. Please note that the program can only save when the live stream is active. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
+Yrewind also allows to set the required duration, resolution and media container. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
 ### [>> download version 21.023](https://github.com/rytsikau/ee.Yrewind/releases/download/20210228/ee.yrewind_21.023.zip)
 
 <br>
 
-## Program screenshot
+## Screenshot
 
 <img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
 
@@ -36,7 +36,7 @@ Yrewind also allows to set the required duration, resolution and media container
 
 <br>
 
-## Usage info
+## Usage
 
 The only required command line argument is the `-url`:
 
@@ -148,7 +148,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
-## Other info
+## Other notes
 
 * All parameters can be replaced with single-character aliases (`-url` with `-u`, `-start` with `-s` etc.)
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval, the duration of the saved file will be shorter by the total duration of those interruptions (a warning for this incompleted file will be displayed)
@@ -174,7 +174,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
-## Developer info
+## Developer information
 
 * C#
 * .NET Framework 4.5
