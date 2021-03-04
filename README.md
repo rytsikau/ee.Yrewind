@@ -148,7 +148,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
-## Other notes
+## Notes
 
 * All parameters can be replaced with single-character aliases (`-url` with `-u`, `-start` with `-s` etc.)
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval, the duration of the saved file will be shorter by the total duration of those interruptions (a warning for this incompleted file will be displayed)
@@ -174,7 +174,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
-## Developer information
+## Developer info
 
 * C#
 * .NET Framework 4.5
