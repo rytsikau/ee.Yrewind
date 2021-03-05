@@ -42,7 +42,7 @@ The only required command line argument is the `-url`:
 
 ##### [**` -url=[url] `**](#)
 
-With this command, the program records a livestream in real time for 1 hour at 1080p resolution (or at a lower if 1080p is not available). URL can be specified in various formats:
+With this command, the program records a livestream in real time for 1 hour at 1080p resolution, or at a lower if 1080p is not available. If you need to make a longer recording, of course, you can repeat this line several times in the batch file. URL can be specified in various formats:
 >     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
 >     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
 >     yrewind -url=9Auq9mYxFEE
