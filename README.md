@@ -130,8 +130,8 @@ The `-output` parameter can be specified partially, then the missing parts are r
 The extension defines the format of the media container in which the video will be saved. Formats description:
 * `.avi`, `.mp4` - use AVC and MP4a data (if AVC is unavailable, use VP9)
 * `.asf`, `.mkv`, `.wmv` - use VP9 and MP4a data (if VP9 is unavailable, use AVC)
-* `.3gp`,` .mov`, `.ts` - use AVC and MP4a data (does **not** support 1080+ resolutions - saves at 1080p even if requested higher resolution is available)
-* `.aac`, `.m4a`, `.wma` - use MP4a data (saves **audio only**)
+* `.3gp`,` .mov`, `.ts` - use AVC and MP4a data (does NOT support 1080+ resolutions - saves at 1080p even if requested higher resolution is available)
+* `.aac`, `.m4a`, `.wma` - use MP4a data (saves AUDIO ONLY)
 
 Also the parameter supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*` (recognizes letters yyyyMMddHHmmss), `*duration*`, `*resolution*`, `*channel_id*`, `*author*` and `*title*`.
 
