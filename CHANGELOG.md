@@ -1,5 +1,17 @@
 # Changelog
 
+## [21.031] - 2021-03-18
+
+### Added
+
+- Support for saving audio files.
+- The `-executeonexit` parameter to run document or executable file after the program finishes.
+
+### Fixed
+
+- Clarified the saved formats.
+- Several minor fixes.
+
 ## [21.023] - 2021-02-28
 
 ### Fixed
@@ -284,6 +296,6 @@
 
 - Basic functionality developed.
 
+[21.031]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210318/ee.yrewind_21.031.zip
 [21.023]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210228/ee.yrewind_21.023.zip
 [21.022]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210224/ee.yrewind_21.022.zip
-[21.021]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210215/ee.yrewind_21.021.zip
