@@ -145,8 +145,8 @@ The next example saves the livestream as *c:\downloads\Sky News\2021-01-12_12-34
 
 ##### [**` -executeonexit='c:\path\to\some\file.ext' `**](#)
 
-Specifies the path to the document or executable file to run after the Yrewind finishes. To run the saved video (using the associated program), instead of the path, specify the renaming mask `*output*`. The example below will run the file *c:\files\song.mp3* when the saved video is ready:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit='c:\files\song.mp3'
+Specifies the path to the document or executable file to run after the Yrewind finishes. To run the saved video (using the associated program), instead of the path, specify the renaming mask `*output*`:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit=*output*
 
 <br>
 
@@ -158,8 +158,8 @@ To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at 1080p:
 To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified directory:
 >     yrewind -url=9Auq9mYxFEE -start=20200505:0455 -resolution=720 -output='d:\Saved_streams\'
 
-To save 90 minutes of the stream, starting from half an hour ago, at the highest available resolution, then play the saved video:
->     yrewind -u=9Auq9mYxFEE -s=-30 -d=90 -r=9999 -e=*output*
+To save 90 minutes of the stream, starting from half an hour ago, at the highest available resolution:
+>     yrewind -u=9Auq9mYxFEE -s=-30 -d=90 -r=9999
 
 <br>
 
