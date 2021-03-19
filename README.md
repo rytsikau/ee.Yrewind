@@ -145,8 +145,8 @@ The next example saves the livestream as *c:\downloads\Sky News\2021-01-12_12-34
 
 ##### [**` -executeonexit='c:\path\to\some\file.ext' `**](#)
 
-Specifies the path to the document or executable file to run after the Yrewind finishes. To run the saved video (using the associated program), instead of the path, specify the renaming mask `*output*`. The example below will run the file *\settings\song.mp3* when the saved video is ready:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit='\settings\song.mp3'
+Specifies the path to the document or executable file to run after the Yrewind finishes. To run the saved video (using the associated program), instead of the path, specify the renaming mask `*output*`. The example below will run the file *c:\files\song.mp3* when the saved video is ready:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit='c:\files\song.mp3'
 
 <br>
 
