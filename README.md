@@ -6,7 +6,7 @@
 [ ` -resolution ` ](#-resolutionheightpixels)
 [ ` -ffmpeg ` ](#-ffmpegcpathtoffmpeg)
 [ ` -output ` ](#-outputcdir1dir2filenameextension)
-[ ` -executeonexit ` ](#-executeonexitcpathtosomefiledat)
+[ ` -executeonexit ` ](#-executeonexitcpathtosomefileext)
 
 Yrewind is a command line utility to save YouTube live stream in its original quality. The program has the following features:
 
@@ -127,13 +127,13 @@ The `-output` parameter can be specified partially, then the missing parts are r
 * `filename` - default folder, custom filename, default extension
 * `.extension` - default folder, default filename, custom extension
 
+Folder and filename supports renaming masks: `*id*`, `*start*`, `*start[customDateTime]*` (recognizes letters yyyyMMddHHmmss), `*duration*`, `*resolution*`, `*channel_id*`, `*author*` and `*title*`.
+
 The extension defines the format of the media container in which the video will be saved. Formats description:
 * `.avi`, `.mp4` - use AVC and MP4a data (if AVC is unavailable, use VP9)
 * `.asf`, `.mkv`, `.wmv` - use VP9 and MP4a data (if VP9 is unavailable, use AVC)
 * `.3gp`,` .mov`, `.ts` - use AVC and MP4a data (does NOT support 1080+ resolutions - saves at 1080p even if requested higher resolution is available)
 * `.aac`, `.m4a`, `.wma` - use MP4a data (saves AUDIO ONLY)
-
-Also the parameter supports the following renaming masks: `*id*`, `*start*`, `*start[customDateTime]*` (recognizes letters yyyyMMddHHmmss), `*duration*`, `*resolution*`, `*channel_id*`, `*author*` and `*title*`.
 
 The example below saves the livestream as *\saved_streams\9Auq9mYxFEE_20210123-185830_060m_1080p.ts*:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -output=.ts
@@ -183,6 +183,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 ## Tested configuration
 
 * FFmpeg 4.3 x86 (by Zeranoe)
+* VLC media player 3.0.10
 * Windows 10 Pro x32 version 1909
 * Windows 10 Pro x64 version 1909
 
