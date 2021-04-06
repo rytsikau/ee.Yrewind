@@ -4,11 +4,11 @@
 
 ### Changed
 
-- The format of the metadata in the saved files (it is now formatted as: *title || author || live stream URL || channel URL || UTC start point*).
+- The format of the metadata in the saved file (it is now formatted as: *title || author || live stream URL || channel URL || UTC start point*).
 
 ### Fixed
 
-- Error while saving files if their paths contains invalid filesystem characters (when using rename masks `*author*` and `*title*`).
+- Error while saving file if its path contains invalid filesystem characters (when using rename masks `*author*` and `*title*`).
 - Several minor fixes.
 
 ## [21.031] - 2021-03-18
