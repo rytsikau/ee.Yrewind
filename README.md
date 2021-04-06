@@ -19,7 +19,9 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 Yrewind also allows to set the required duration, resolution and format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
-### [>> download version 21.031](https://github.com/rytsikau/ee.Yrewind/releases/download/20210318/ee.yrewind_21.031.zip)
+### [>> download version 21.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip)
+
+**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! It really helps maintain the program. For business inquiries, write to my e-mail**
 
 <br>
 
@@ -108,7 +110,7 @@ Specifies the required resolution in pixels (height). If this parameter is missi
 
 ##### [**` -ffmpeg='c:\path\to\ffmpeg\' `**](#)
 
-Specifies the path to FFmpeg library. If this parameter is missing, Yrewind uses FFmpeg located in its folder. Alternatively, the path to VLC media player can be specified here - in this case, the requested time interval will be opened by this player instead of being saved. In the example below, Yrewind uses FFmpeg located in the specified directory:
+Specifies the path to FFmpeg library. If this parameter is missing, Yrewind uses FFmpeg located in its folder.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -ffmpeg='d:\FFmpeg\'
 
 <br>
@@ -173,6 +175,15 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
+## Some legal info
+
+* The software provides in a convenient form information available on the Internet in the public domain
+* The software is free for non-commercial use and is provided 'as is' without warranty of any kind, either express or implied
+* The author will not be liable for data loss, damages or any other kind of loss while using or misusing this software
+* The author is not responsible for the misuse of materials containing copyrighted, age-restricted or any other protected content
+
+<br>
+
 ## Requirements
 
 * FFmpeg static build (included in the archive)
@@ -183,7 +194,6 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 ## Tested configuration
 
 * FFmpeg 4.3 x86 (by Zeranoe)
-* VLC media player 3.0.10
 * Windows 10 Pro x32 version 1909
 * Windows 10 Pro x64 version 1909
 
