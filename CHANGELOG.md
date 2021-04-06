@@ -1,5 +1,16 @@
 # Changelog
 
+## [21.041] - 2021-04-06
+
+### Changed
+
+- The format of the metadata in the saved files (it is now formatted as "title || author || live stream URL || channel URL || UTC start point").
+
+### Fixed
+
+- Error while saving files if their path contains invalid filesystem characters (when using rename masks *author* and *title*).
+- Several minor fixes.
+
 ## [21.031] - 2021-03-18
 
 ### Added
@@ -296,6 +307,6 @@
 
 - Basic functionality developed.
 
+[21.041]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip
 [21.031]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210318/ee.yrewind_21.031.zip
 [21.023]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210228/ee.yrewind_21.023.zip
-[21.022]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210224/ee.yrewind_21.022.zip
