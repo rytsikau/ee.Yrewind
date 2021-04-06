@@ -184,6 +184,14 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
+## Developer info
+
+* C#
+* .NET Framework 4.5
+* Visual Studio Community 2019
+
+<br>
+
 ## Requirements
 
 * FFmpeg static build (included in the archive)
@@ -196,14 +204,6 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * FFmpeg 4.3 x86 (by Zeranoe)
 * Windows 10 Pro x32 version 1909
 * Windows 10 Pro x64 version 1909
-
-<br>
-
-## Developer info
-
-* C#
-* .NET Framework 4.5
-* Visual Studio Community 2019
 
 <br>
 
