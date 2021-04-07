@@ -21,7 +21,7 @@ Yrewind also allows to set the required duration, resolution and format. For a l
 
 ### [>> download version 21.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip)
 
-**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! It really helps maintain the program. For business inquiries, e-mail me**
+**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! It really helps maintain the program. For business inquiries, [e-mail](mailto:y.rytsikau@gmail.com) me**
 
 <br>
 
@@ -177,7 +177,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 ## Some legal info
 
-* The software provides in a convenient form information available on the Internet in the public domain
+* The software provides in a convenient form data available on the Internet in the public domain
 * The software is free for non-commercial use and is provided 'as is' without warranty of any kind, either express or implied
 * The author will not be liable for data loss, damages or any other kind of loss while using or misusing this software
 * The author is not responsible for the misuse of materials containing copyrighted, age-restricted or any other protected content
