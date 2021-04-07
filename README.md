@@ -175,7 +175,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 <br>
 
-## Some legal info
+## Terms of use
 
 * This software provides access to information on the Internet that is publicly available and does not require authorization and/or authentication
 * This software is free for non-commercial use and is provided 'as is' without warranty of any kind, either express or implied
