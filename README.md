@@ -11,9 +11,9 @@
 Yrewind is a command line utility to save YouTube live stream in its original quality. The program has the following features:
 
 * Delayed start recording
-* Recording the live stream in real time
-* Rewinding the live stream to specified point in the past
-* Rewinding the live stream to the first available point in the past
+* Recording in real time
+* Rewinding to the specified time point in the past
+* Rewinding to the first available time point in the past
 * Waiting for the scheduled live stream to start and then automatically recording from the first second
 * Monitoring the specified channel for new live streams and then automatically recording from the first second
 
@@ -177,7 +177,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 ## Terms of use
 
-* This software provides access to information on the Internet that is publicly available and does not require authorization and/or authentication
+* This software provides access to information on the Internet that is publicly available and does not require authorization or authentication
 * This software is free for non-commercial use and is provided 'as is' without warranty of any kind, either express or implied
 * The author will not be liable for data loss, damages or any other kind of loss while using or misusing this software
 * The author will not be liable for the misuse of content obtained using this software, including copyrighted, age-restricted, or any other protected content
