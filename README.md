@@ -177,10 +177,10 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 ## Some legal info
 
-* This software provides access to information available on the Internet in the public domain
+* This software provides access to information on the Internet that is publicly available and does not require authorization and/or authentication
 * This software is free for non-commercial use and is provided 'as is' without warranty of any kind, either express or implied
 * The author will not be liable for data loss, damages or any other kind of loss while using or misusing this software
-* The author is not responsible for the misuse of materials containing copyrighted, age-restricted or any other protected content
+* The author will not be liable for the misuse of content obtained using this software, including copyrighted, age-restricted, or any other protected content
 
 <br>
 
