@@ -17,11 +17,11 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 * Waiting for the scheduled live stream to start and then automatically recording from the first second
 * Monitoring the specified channel for new live streams and then automatically recording from the first second
 
-Yrewind also allows to set the required duration, resolution and format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). Although the program is quite simple, you can also watch [the short tutorial video](https://www.youtube.com/watch?v=7HIIKBUPH5U).
+Yrewind also allows to set the required duration, resolution and format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). Short tutorial video [here](https://www.youtube.com/watch?v=7HIIKBUPH5U).
 
 ### [>> download version 21.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip)
 
-**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! It really helps maintain the program. For business inquiries, [e-mail](mailto:y.rytsikau@gmail.com) me**
+**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! It really helps maintain the program. For commercial inquiries, [e-mail](mailto:y.rytsikau@gmail.com) me**
 
 <br>
 
@@ -36,7 +36,7 @@ Yrewind also allows to set the required duration, resolution and format. For a l
 1. Unpack the downloaded archive
 2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples
 3. Save *run.bat* and run it
-* A short tutorial video [here](https://www.youtube.com/watch?v=7HIIKBUPH5U)
+* Short tutorial video [here](https://www.youtube.com/watch?v=7HIIKBUPH5U)
 
 <br>
 
@@ -158,7 +158,7 @@ Specifies the path to the document or executable file to run after the Yrewind f
 To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at 1080p:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=Y:1045 -duration=15
 
-To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified directory:
+To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified folder:
 >     yrewind -url=9Auq9mYxFEE -start=20200505:0455 -resolution=720 -output='d:\Saved_streams\'
 
 To save 90 minutes of the stream, starting from half an hour ago, at the highest available resolution:
