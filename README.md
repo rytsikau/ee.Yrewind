@@ -21,7 +21,7 @@ Yrewind also allows to set the required duration, resolution and format. For a l
 
 ### [>> download version 21.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip)
 
-**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! It really helps maintain the program. For commercial inquiries, [e-mail](mailto:y.rytsikau@gmail.com) me**
+**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! (sorry for the exotic, Paypal doesn't work in my country) For commercial inquiries, [e-mail](mailto:y.rytsikau@gmail.com) me**
 
 <br>
 
@@ -168,7 +168,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 ## Notes
 
-* All arguments and keywords can be replaced with single-character aliases (`-url` with `-u`, `-start` with `-s`, `beginning` with `b`, etc.). This does not apply to rename masks
+* All arguments and keywords can be replaced with single-character aliases: `-url` with `-u`, `-start` with `-s`, `beginning` with `b`, etc. This does not apply to rename masks
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval (this often happens at the beginning of the stream), the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
 * The calculated point for the `-start` parameter is the local time on computer when the program starts (displayed in the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
