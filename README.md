@@ -21,7 +21,7 @@ Yrewind also allows to set the required duration, resolution and format. For a l
 
 ### [>> download version 21.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip)
 
-**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! (sorry for the exotic, Paypal doesn't work in my country) Please send business proposals to my [email](mailto:y.rytsikau@gmail.com)**
+**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! (sorry for the exotic, Paypal doesn't work in my country) <br>Please send business proposals to my [email](mailto:y.rytsikau@gmail.com)**
 
 <br>
 
