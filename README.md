@@ -171,9 +171,9 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 * All arguments and keywords can be replaced with single-character aliases: `-url` with `-u`, `-start` with `-s`, `beginning` with `b`, etc. This does not apply to rename masks
 * If you are using proxy, VPN or special firewall settings, keep in mind that not only Yrewind should have appropriate access, but also FFmpeg
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval (this often happens at the beginning of the stream), the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
-* The calculated point for the `-start` parameter is the local time on computer when the program starts (displayed in the first line)
+* The base point of reference for the `-start` parameter is the local time on the computer when the program was started (displayed on the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
-* To prevent video file corruption due to network errors or software crashes, use TS container to save the video (`-output=.ts`). Another way to reduce the chance of errors is to download the livestream as multiple video files with a relatively short duration (for example, 60 minutes)
+* To prevent video file corruption due to network errors or software crashes, use TS container to save the video (`-output=.ts`). Another way to reduce the chance of error is to download the livestream as multiple video files with a relatively short duration (for example, default 60 minutes)
 
 <br>
 
