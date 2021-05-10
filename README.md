@@ -21,8 +21,6 @@ Yrewind also allows to set the required duration, resolution and format. For a l
 
 ### [>> download version 21.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip)
 
-**Feel free to [donate](https://blockchain.com/btc/payment_request?address=1GAdmjbBTcXPJnAaxm9wvtPggSrBG9krhx&amount=0.0001&message=donate_y.rytsikau@gmail.com)! (sorry for the exotic, Paypal doesn't work in my country) <br>Please send business proposals to my [email](mailto:y.rytsikau@gmail.com)**
-
 <br>
 
 ## Screenshot
@@ -212,6 +210,12 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 ## Tags
 
 download dvr live livestream record rewind save stream youtube
+
+<br>
+
+## About
+
+Save YouTube live stream: rewind to the beginning, record in real time, wait for a new one, etc.
 
 ---
 [[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io) [[author e-mail]](mailto:y.rytsikau@gmail.com)
