@@ -1,5 +1,18 @@
 # Changelog
 
+## [21.051] - 2021-05-20
+
+### Added
+
+- Added support for arguments and nested quotes when using the `-executeonexit` parameter.
+- Added the ability to autorestart to get the next part of the stream (command `-executeonexit=*getnext*`).
+
+### Fixed
+
+- Added an additional way to determine UTC time if the page of the required stream contains incorrect information (the reason for the hang of some streams).
+- Several minor fixes.
+- Updated algorithm for obtaining information about the stream.
+
 ## [21.041] - 2021-04-06
 
 ### Changed
@@ -307,6 +320,6 @@
 
 - Basic functionality developed.
 
+[21.051]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210520/ee.yrewind_21.051.zip
 [21.041]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip
 [21.031]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210318/ee.yrewind_21.031.zip
-[21.023]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210228/ee.yrewind_21.023.zip
