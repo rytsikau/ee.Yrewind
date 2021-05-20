@@ -19,7 +19,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 Yrewind also allows to set the required duration, resolution and format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). Short tutorial video [here](https://www.youtube.com/watch?v=7HIIKBUPH5U).
 
-### [>> download version 21.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip)
+### [>> download version 21.051](https://github.com/rytsikau/ee.Yrewind/releases/download/20210520/ee.yrewind_21.051.zip)
 
 <br>
 
@@ -130,10 +130,10 @@ The `-output` parameter can be specified partially, then the missing parts are r
 
 Folder and filename supports renaming masks: `*id*`, `*start*`, `*start[customDateTime]*` (recognizes letters yyyyMMddHHmmss), `*duration*`, `*resolution*`, `*channel_id*`, `*author*` and `*title*`.
 
-The extension defines the format of the media container in which the video will be saved. Formats description:
+The extension defines the format of the media container in which the livestream will be saved. Formats description:
 * `.avi`, `.mp4` - use AVC and MP4a data (if AVC is unavailable, use VP9)
 * `.asf`, `.mkv`, `.wmv` - use VP9 and MP4a data (if VP9 is unavailable, use AVC)
-* `.3gp`,` .mov`, `.ts` - use AVC and MP4a data (does not support 1080+ resolutions - saves at 1080p even if requested higher resolution is available)
+* `.3gp`, ` .flv`, ` .mov`, `.ts` - use AVC and MP4a data (does not support 1080+ resolutions - saves at 1080p even if requested higher resolution is available)
 * `.aac`, `.m4a`, `.wma` - use MP4a data (saves audio only)
 
 The example below saves the livestream as *\saved_streams\9Auq9mYxFEE_20210123-185830_060m_1080p.ts*:
@@ -146,8 +146,9 @@ The next example saves the livestream as *c:\downloads\Sky News\2021-01-12_12-34
 
 ##### [**` -executeonexit='c:\path\to\some\file.ext' `**](#)
 
-Specifies the path to the document or executable file to run after the Yrewind finishes. To run the saved video (using the associated program), instead of the path, specify the renaming mask `*output*`:
+Specifies the command to run after Yrewind exits. If it's an executable file, you can also specify the arguments it supports (don't forget the quotes). The non-executable file will be launched by the associated program. The parameter supports two rename masks - `*output*`, which contains the full path of the saved video, and `*getnext*`, which contains the command to start Yrewind again to get the next interval of stream. In the first example below, the saved video will be opened by the associated program, in the second - using the specified program:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit=*output*
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit=''c:\Program Files\VLC mediaplayer\vlc.exe' *output*'
 
 <br>
 
@@ -168,10 +169,12 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 * All arguments and keywords can be replaced with single-character aliases: `-url` with `-u`, `-start` with `-s`, `beginning` with `b`, etc. This does not apply to rename masks
 * If you are using proxy, VPN or special firewall settings, keep in mind that not only Yrewind should have appropriate access, but also FFmpeg
-* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the video is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval (this often happens at the beginning of the stream), the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
+* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the livestream is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval (this often happens at the beginning of the stream), the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
+* Occasionally, the message `unable to verify the saved file is correct` appears. The reasons may be as follows: if the duration of the saved file cannot be verified (there is a possibility that the file is damaged); if the duration of the saved file does not match the requested one (also in this case, the output file name contains the word *INCOMPLETE*); if the starting point of the requested time interval cannot be accurately determined (rare case due to server side error)
 * The base point of reference for the `-start` parameter is the local time on the computer when the program was started (displayed on the first line)
 * To determine the earliest available point, try download the knowingly unavailable time interval (for example, `-start=20000101:0000`). After a while, the program will show a warning indicating the earliest available point at the moment
-* To prevent video file corruption due to network errors or software crashes, use TS container to save the video (`-output=.ts`). Another way to reduce the chance of error is to download the livestream as multiple video files with a relatively short duration (for example, default 60 minutes)
+* To prevent output file corruption due to network errors or software crashes, use FLV or TS media container (`-output=.flv`, `-output=.ts`). Another way to reduce the chance of error is to download the livestream as multiple files with a relatively short duration (for example, default 60 minutes)
+* When using the `-executeonexit=*getnext*` command inside a batch file, keep in mind that this file is first executed to the end, and only then the `*getnext*` command is executed. Also use rename masks `*start*` and `*start[customDateTime]*` to avoid duplicate names of saved stream parts (or just use default auto-naming)
 
 <br>
 
