@@ -1,11 +1,30 @@
 # Changelog
 
+## [21.061] - 2021-06-03
+
+### Added
+
+- Parameter `-cookie` to save live stream using cookie file.
+
+### Changed
+
+- The `-start` parameter is now calculated not relative to the time on the computer, but relative to the server time.
+- The relative path in the `-ffmpeg` parameter is now determined relative to the location of the batch file (command run) directory, rather than relative to the location of *yrewind.exe*.
+
+### Fixed
+
+- Several minor fixes.
+
+### Removed
+
+- The ability to view a specified time interval using *VLC Media Player*.
+
 ## [21.051] - 2021-05-20
 
 ### Added
 
-- Added support for arguments and nested quotes when using the `-executeonexit` parameter.
-- Added the ability to autorestart to get the next part of the stream (command `-executeonexit=*getnext*`).
+- Support for arguments and nested quotes when using the `-executeonexit` parameter.
+- The ability to autorestart to get the next part of the stream (command `-executeonexit=*getnext*`).
 
 ### Fixed
 
@@ -83,9 +102,9 @@
 
 ### Added
 
-- Added option `-filename` to save live stream with custom file name (rename masks supported).
-- Added option `-start=yyyyMMdd:hhmmss` to specify starting point with seconds.
-- Added option `-url=[channelUrl]` to monitor the specified channel for new live streams.
+- Parameter `-filename` to save live stream with custom file name (rename masks supported).
+- Parameter `-start=yyyyMMdd:hhmmss` to specify starting point with seconds.
+- Parameter `-url=[channelUrl]` to monitor the specified channel for new live streams.
 
 ### Fixed
 
@@ -96,21 +115,21 @@
 
 ### Added
 
-- Added `-start=+[minutes]` option for the delayed start of recording.
-- Added streamer name to video file metadata.
+- Option `-start=+[minutes]` for the delayed start of recording.
+- Streamer name to video file metadata.
 - Time in filename is now with seconds.
 
 ### Fixed
 
-- Fixed a bug due to which the program could not find information about the stream.
+- The bug due to which the program could not find information about the stream.
 - Several minor fixes.
 
 ## [21.011] - 2021-01-04
 
 ### Added
 
-- Added `-start=beginning` option to rewind the live stream to the first available moment.
-- Added `-start=wait` option to wait for the scheduled live stream to start and then automatically record it from the first second.
+- Option `-start=beginning` to rewind the live stream to the first available moment.
+- Option `-start=wait` to wait for the scheduled live stream to start and then automatically record it from the first second.
 
 ### Changed
 
@@ -118,12 +137,12 @@
 
 ### Fixed
 
-- Fixed bug with FFmpeg freezing if stream terminated during real time recording.
+- The bug with FFmpeg freezing if stream terminated during real time recording.
 - Several minor fixes.
 
 ### Removed
 
-- The `-pathchrome` and `-nocache` options have been removed.
+- The `-pathchrome` and `-nocache` parameters have been removed.
 
 ## [20.124] - 2020-12-31
 
@@ -137,14 +156,14 @@
 
 ### Removed
 
-- Removed dependency on Google Chrome. Now the browser is not required for the program to work.
+- Dependency on Google Chrome. Now the browser is not required for the program to work.
 
 ## [20.123] - 2020-12-28
 
 ### Added
 
-- Added parameter `-vformat=[formatExtension]`.
-- Added support for resolutions higher than 1080p.
+- Parameter `-vformat=[formatExtension]`.
+- Support for resolutions higher than 1080p.
 
 ### Fixed
 
@@ -159,25 +178,25 @@
 
 ### Fixed
 
-- Fixed a bug due to which all incomplete videos were without sound (for example, when the program was manually closed during recording).
+- The bug due to which all incomplete videos were without sound (for example, when the program was manually closed during recording).
 - Several minor fixes.
 
 ### Removed
 
-- Removed sync warning in file name if duration does not match specified. Now program just leaves temp file name.
+- Sync warning in file name if duration does not match specified. Now program just leaves temp file name.
 
 ## [20.121] - 2020-12-10
 
 ### Fixed
 
-- Fixed an issue where some streams could not be downloaded due to an error 9411 (*Cannot process live stream with FFmpeg library*).
+- An issue where some streams could not be downloaded due to an error 9411 (*Cannot process live stream with FFmpeg library*).
 - Several minor fixes.
 
 ## [20.113] - 2020-11-28
 
 ### Added
 
-- Added *real time* mode: now program can record live stream in real time.
+- The *real time* mode: now program can record live stream in real time.
 
 ### Changed
 
@@ -187,14 +206,14 @@
 
 ### Fixed
 
-- Fixed a bug that caused an exception to be thrown when specifying a non-absolute path to the `-pathsave` parameter.
+- The bug that caused an exception to be thrown when specifying a non-absolute path to the `-pathsave` parameter.
 - Several minor fixes.
 
 ## [20.112] - 2020-11-16
 
 ### Added
 
-- Added preliminary internet connection check to prevent FFmpeg freezing.
+- Preliminary internet connection check to prevent FFmpeg freezing.
 
 ### Changed
 
@@ -202,14 +221,14 @@
 
 ### Fixed
 
-- Fixed a bug with incorrect URL recognition if it was specified without quotes and contained a hyphen.
+- The bug with incorrect URL recognition if it was specified without quotes and contained a hyphen.
 - Several minor fixes.
 
 ## [20.111] - 2020-11-03
 
 ### Added
 
-- Added parameter `-start=-[minutes]`.
+- Parameter `-start=-[minutes]`.
 
 ### Fixed
 
@@ -219,18 +238,18 @@
 
 ### Added
 
-- Added duration checking for downloaded videos.
+- Duration checking for downloaded videos.
 
 ### Fixed
 
-- Fixed an error 9124 (*FFmpeg not found*) if *bat* file was located in a different directory than program.
+- An error 9124 (*FFmpeg not found*) if *bat* file was located in a different directory than program.
 - Several minor fixes.
 
 ## [20.104] - 2020-10-13
 
 ### Added
 
-- Added saving metadata to the output video.
+- Saving metadata to the output video.
 
 ## [20.103] - 2020-10-12
 
@@ -252,9 +271,9 @@
 
 ### Added
 
-- Added check for other instances of the program is running.
-- Added determining of the earliest available live stream time point.
-- Added the ability to cache live stream information to improve save speed.
+- Checking if other instances of the program is running.
+- Determining of the earliest available live stream time point.
+- The ability to cache live stream information to improve save speed.
 
 ### Changed
 
@@ -263,19 +282,19 @@
 
 ### Fixed
 
-- Fixed a bug when empty directories created by the current instance of the program (for example, if the video did not downloaded) were not deleted.
-- Fixed a bug causing the duration of some videos to be several seconds longer than the specified one.
+- The bug when empty directories created by the current instance of the program (for example, if the video did not downloaded) were not deleted.
+- The bug causing the duration of some videos to be several seconds longer than the specified one.
 - Several minor fixes.
 
 ## [20.075] - 2020-07-30
 
 ### Added
 
-- Added check for interval availability before downloading it.
+- Checking for interval availability before downloading it.
 
 ### Fixed
 
-- Fixed a funny bug with playing live stream sound when receiving information about it.
+- The bug with playing live stream sound when receiving information about it.
 - Several minor fixes.
 
 ## [20.074] - 2020-07-21
@@ -292,7 +311,7 @@
 
 ### Added
 
-- Added recognition of different URL spellings.
+- Recognition of different URL spellings.
 
 ### Fixed
 
@@ -302,10 +321,10 @@
 
 ### Added
 
-- Added a function showing download progress.
-- Added built-in help system (with contents of *readme* file).
-- Added live stream title parsing.
-- Added video type recognition (live stream or regular video).
+- The function showing download progress.
+- Built-in help (with contents of *readme* file).
+- Live stream title parsing.
+- Video type recognition (live stream or regular video).
 - Video is now first saved under a temporary file name to prevent overwriting in case of an error.
 
 ### Fixed
@@ -318,8 +337,10 @@
 
 ## [20.071] - 2020-07-06
 
+### Added
+
 - Basic functionality developed.
 
+[21.061]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210603/ee.yrewind_21.061.zip
 [21.051]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210520/ee.yrewind_21.051.zip
 [21.041]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210406/ee.yrewind_21.041.zip
-[21.031]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210318/ee.yrewind_21.031.zip
