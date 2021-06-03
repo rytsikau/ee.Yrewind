@@ -20,7 +20,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 The program also allows to set the required duration, resolution and media format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). Short tutorial video [here](https://www.youtube.com/watch?v=7HIIKBUPH5U).
 
-### [>> download version 21.061](https://github.com/rytsikau/ee.Yrewind/releases/download/20210602/ee.yrewind_21.061.zip)
+### [>> download version 21.061](https://github.com/rytsikau/ee.Yrewind/releases/download/20210603/ee.yrewind_21.061.zip)
 
 <br>
 
