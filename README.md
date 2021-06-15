@@ -20,7 +20,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 The program also allows to set the required duration, resolution and media format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). Short tutorial video [here](https://www.youtube.com/watch?v=7HIIKBUPH5U).
 
-### [>> download version 21.061](https://github.com/rytsikau/ee.Yrewind/releases/download/20210603/ee.yrewind_21.061.zip)
+### [>> download version 21.062](https://github.com/rytsikau/ee.Yrewind/releases/download/20210615/ee.yrewind_21.062.zip)
 
 <br>
 
@@ -122,7 +122,7 @@ Specifies custom folder, filename and extension (media container format) for the
 * `[id]_[date]-[time]_[duration]_[resolution]` - for filename
 * `.mp4` - for extension
 
-The `-output` parameter can be specified partially, then the missing parts are replaced with the default values. In this case, the part of the string to the right of the last slash is interpreted as a filename and/or extension. If a string does not contain slashes, it's fully interpreted as a filename and/or extension:
+The `-output` parameter can be specified partially, then the missing parts are replaced with the default values. In this case, the part of the string to the right of the last slash is interpreted as filename and/or extension. If the string does not contain slashes, it's fully interpreted as filename and/or extension:
 * `c:\dir1\dir2\` - custom folder, default filename, default extension
 * `dir1\filename` - custom subfolder, custom filename, default extension
 * `dir1\.extension` - custom subfolder, default filename, custom extension
