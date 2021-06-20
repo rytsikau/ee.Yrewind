@@ -1,5 +1,11 @@
 # Changelog
 
+## [21.063] - 2021-06-20
+
+### Changed
+
+- A way to get technical information about live stream - Yrewind now uses a browser (Google Chrome or Microsoft Edge if Chrome is not installed).
+
 ## [21.062] - 2021-06-15
 
 ### Fixed
@@ -347,6 +353,6 @@
 
 - Basic functionality developed.
 
+[21.063]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210620/ee.yrewind_21.063.zip
 [21.062]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210615/ee.yrewind_21.062.zip
 [21.061]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210603/ee.yrewind_21.061.zip
-[21.051]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210520/ee.yrewind_21.051.zip
