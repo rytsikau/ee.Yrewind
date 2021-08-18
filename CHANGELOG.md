@@ -4,7 +4,7 @@
 
 ### Changed
 
-- A way to get technical information about live stream - Yrewind now uses a browser (Google Chrome or Microsoft Edge if Chrome is not installed).
+- The way to get technical information about live stream - Yrewind now uses a browser (Google Chrome or Microsoft Edge if Chrome is not installed). This method is slightly slower and more buggy, but more resilient to various changes on YouTube servers.
 
 ## [21.062] - 2021-06-15
 
