@@ -1,5 +1,11 @@
 # Changelog
 
+## [21.121] - 2021-12-01
+
+### Changed
+
+- Nothing has changed (technical release).
+
 ## [21.063] - 2021-06-20
 
 ### Changed
@@ -353,6 +359,6 @@
 
 - Basic functionality developed.
 
+[21.121]: https://github.com/rytsikau/ee.Yrewind/releases/download/20211201/ee.yrewind_21.121.zip
 [21.063]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210620/ee.yrewind_21.063.zip
 [21.062]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210615/ee.yrewind_21.062.zip
-[21.061]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210603/ee.yrewind_21.061.zip
