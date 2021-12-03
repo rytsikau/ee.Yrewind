@@ -24,6 +24,10 @@ The program also allows to set the required duration, resolution and media forma
 
 <br>
 
+**If you missed a moment on your favorite stream - email me! I'll try to download it personally for you. We will agree for a small fee :) As a rule, a rewind of up to 168 hours is possible. I can also download required streams on a regular basis. Pay via Payoneer (Paypal is not available in my country, sorry)**
+
+<br>
+
 ## Screenshot
 
 <img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
@@ -216,14 +220,14 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 ## Tested configuration
 
 * FFmpeg 4.3 x86 (by Zeranoe)
-* Windows 10 Pro x32 version 1909
-* Windows 10 Pro x64 version 1909
+* Windows 10 Pro x32
+* Windows 10 Pro x64
 
 <br>
 
 ## Tags
 
-download dvr live livestream record rewind save stream youtube
+download downloader dvr live livestream record rewind save stream youtube
 
 <br>
 
