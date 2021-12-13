@@ -24,10 +24,6 @@ The program also allows to set the required duration, resolution and media forma
 
 <br>
 
-**If you missed a moment on your favorite stream - email me! I'll try to download it personally for you. We will agree for a small fee :) As a rule, a rewind of up to 168 hours is possible. I can also download required streams on a regular basis. Pay via Payoneer (Paypal is not available in my country, sorry)**
-
-<br>
-
 ## Screenshot
 
 <img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
