@@ -229,7 +229,7 @@ download downloader dvr live livestream record rewind save stream youtube
 
 ## About
 
-Save YouTube live stream: rewind to the beginning, record in real time, wait for a new one, etc.
+Records YouTube live stream that's in progress, including the ability to rewind up to 168 hours
 
 ---
 [[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io) [[author e-mail]](mailto:y.rytsikau@gmail.com)
