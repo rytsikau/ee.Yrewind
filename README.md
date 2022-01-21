@@ -20,7 +20,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 The program also allows to set the required duration, resolution and media format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
-### [>> download version 21.121](https://github.com/rytsikau/ee.Yrewind/releases/download/20211201/ee.yrewind_21.121.zip)
+### [>> download version 22.011](https://github.com/rytsikau/ee.Yrewind/releases/download/20220121/ee.yrewind_22.011.zip)
 
 <br>
 
@@ -229,7 +229,7 @@ download downloader dvr live livestream record rewind save stream youtube
 
 ## About
 
-Records YouTube live stream that's in progress, including the ability to rewind up to 168 hours
+Records YouTube live stream that's in progress, has the ability to rewind up to 168 hours
 
 ---
 [[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io) [[author e-mail]](mailto:y.rytsikau@gmail.com)
