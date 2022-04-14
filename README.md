@@ -4,7 +4,7 @@ Yrewind is a command line utility to save YouTube live stream in its original qu
 
 * Delayed start recording
 * Recording in real time
-* Rewinding to the specified time point in the past
+* Rewinding to the specified time point in the past, and downloading from that point
 * Waiting for the scheduled live stream to start and then automatically recording from the first second
 * Monitoring the specified channel for new live streams and then automatically recording from the first second
 
@@ -20,7 +20,7 @@ List of supported parameters:
 [ ` -cookie (-c) ` ](#-cookiecpathtocookiefileext)<br>
 [ ` -executeonexit (-e) ` ](#-executeonexitcpathtosomefileext)<br>
 
-The changes in the new version please see in [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
+Changes in the new version please see in [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
 
 ### [>> download version 22.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20220414/ee.yrewind_22.041.zip)
 
@@ -148,7 +148,7 @@ The next example saves the livestream as *d:\My saved streams\Sky News\2021-01-1
 
 ##### [**` -browser='c:\path\to\browser\file.exe' `**](#)
 
-Allows using of browser to get technical information about the live stream. For portable version, specify the full path to the executable file; for installed version, it is usually enough to specify the name of the browser. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc.
+Allows to use browser to get technical information about the live stream. It can be useful if Yrewind can't get info about the stream on its own. The browser will be launched in headless mode. For the portable version, specify the full path to the executable file; for the installed version, it's usually enough to specify the name of the browser. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\My Portable Programs\Vivaldi\Application\vivaldi.exe'
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=msedge
 
@@ -156,7 +156,7 @@ Allows using of browser to get technical information about the live stream. For 
 
 ##### [**` -cookie='c:\path\to\cookie\file.ext' `**](#)
 
-Specifies the path to the cookie file. If a relative path is specified, the base folder is the folder from which the command line was run. The parameter is required if YouTube displays captcha page. Cookie file can be obtained using a browser add-on, or, alternatively, cookie string can be copied directly from the browser developer console and saved as a text file. Please note, that cookie obtained as a result of solving captcha is usable for only a few hours. Possibly, instead of solving captcha, it's better to log in to YouTube and create cookie file containing the login data.
+Specifies the path to the cookie file. If a relative path is specified, the base folder is the folder from which the command line was run. This parameter can be useful if YouTube requires authorization or captcha. Cookie file can be obtained using a browser add-on, or, alternatively, cookie string can be copied directly from the browser developer console and saved as a text file. Please note, that cookie obtained as a result of solving captcha is usable for only a few hours. Thus, instead of solving captcha, it's better to log in to YouTube and create cookie file containing the login data.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -cookie='cookies.txt'
 
 <br>
@@ -233,7 +233,7 @@ download downloader dvr live livestream record rewind save stream youtube
 
 ## About
 
-Records YouTube ongoing live stream, can rewind it up to 168 hours
+Console utility to save YouTube live stream, has rewind function up to 168 hours
 
 ---
 [[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io) [[author e-mail]](mailto:y.rytsikau@gmail.com)
