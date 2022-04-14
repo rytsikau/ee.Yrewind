@@ -1,39 +1,34 @@
 # ee.Yrewind
 
-[ ` -url ` ](#-urlurl)
-[ ` -start ` ](#-startyyyymmddhhmm--startyyyymmddhhmmss)
-[ ` -duration ` ](#-durationminutes)
-[ ` -resolution ` ](#-resolutionheightpixels)
-[ ` -ffmpeg ` ](#-ffmpegcpathtoffmpeg)
-[ ` -output ` ](#-outputcdir1dir2filenameextension)
-[ ` -cookie ` ](#-cookiecpathtocookiefileext)
-[ ` -executeonexit ` ](#-executeonexitcpathtosomefileext)
-
 Yrewind is a command line utility to save YouTube live stream in its original quality. The program has the following features:
 
 * Delayed start recording
 * Recording in real time
 * Rewinding to the specified time point in the past
-* Rewinding to the first available time point in the past
 * Waiting for the scheduled live stream to start and then automatically recording from the first second
 * Monitoring the specified channel for new live streams and then automatically recording from the first second
 
-The program also allows to set the required duration, resolution and media format. For a list of changes in new version, see the [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
+List of supported parameters:
 
-### [>> download version 22.011](https://github.com/rytsikau/ee.Yrewind/releases/download/20220121/ee.yrewind_22.011.zip)
-(latest beta [here](https://github.com/rytsikau/ee.Yrewind/raw/main/beta/202202030310/yrewind.exe))
+[ ` -url (-u) ` ](#-urlurl)<br>
+[ ` -start (-s) ` ](#-startyyyymmddhhmm--startyyyymmddhhmmss)<br>
+[ ` -duration (-d) ` ](#-durationminutes)<br>
+[ ` -resolution (-r) ` ](#-resolutionheightpixels)<br>
+[ ` -ffmpeg (-f) ` ](#-ffmpegcpathtoffmpeg)<br>
+[ ` -output (-o) ` ](#-outputcdir1dir2filenameextension)<br>
+[ ` -browser (-b) ` ](#-browsercpathtobrowserfileexe)<br>
+[ ` -cookie (-c) ` ](#-cookiecpathtocookiefileext)<br>
+[ ` -executeonexit (-e) ` ](#-executeonexitcpathtosomefileext)<br>
+
+The changes in the new version please see in [changelog](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md).
+
+### [>> download version 22.041](https://github.com/rytsikau/ee.Yrewind/releases/download/20220414/ee.yrewind_22.041.zip)
 
 <br>
 
 ## Screenshot
 
 <img src='https://github.com/rytsikau/ee.yrewind/raw/main/screenshot.png'>
-
-<br>
-
-## Requirements
-
-To get technical information about live stream, Yrewind uses a browser (Google Chrome or Microsoft Edge if Chrome is not installed)
 
 <br>
 
@@ -151,6 +146,14 @@ The next example saves the livestream as *d:\My saved streams\Sky News\2021-01-1
 
 <br>
 
+##### [**` -browser='c:\path\to\browser\file.exe' `**](#)
+
+Allows using of browser to get technical information about the live stream. For portable version, specify the full path to the executable file; for installed version, it is usually enough to specify the name of the browser. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc.
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\My Portable Programs\Vivaldi\Application\vivaldi.exe'
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=msedge
+
+<br>
+
 ##### [**` -cookie='c:\path\to\cookie\file.ext' `**](#)
 
 Specifies the path to the cookie file. If a relative path is specified, the base folder is the folder from which the command line was run. The parameter is required if YouTube displays captcha page. Cookie file can be obtained using a browser add-on, or, alternatively, cookie string can be copied directly from the browser developer console and saved as a text file. Please note, that cookie obtained as a result of solving captcha is usable for only a few hours. Possibly, instead of solving captcha, it's better to log in to YouTube and create cookie file containing the login data.
@@ -181,9 +184,8 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 ## Notes
 
-* All arguments and keywords can be replaced with single-character aliases: `-url` with `-u`, `-start` with `-s`, `beginning` with `b`, etc. This does not apply to rename `*masks*`
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be downloaded as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the livestream is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval (this often happens at the beginning of the stream), the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
-* Most media formats allows to watch livestream while it is downloading
+* As a rule, a file that is in the process of downloading can be played simultaneously using the player (depends on the selected file extension)
 * Occasionally, the message `unable to verify the saved file is correct` appears. The reasons may be as follows: if the duration of the saved file cannot be verified (there is a possibility that the file is damaged); if the duration of the saved file does not match the requested one (also in this case, the output file name contains the word *INCOMPLETE*); if the starting point of the requested time interval cannot be accurately determined (for example due to server side error)
 * To reduce the likelihood of output file corruption during live recording (without rewind function), it is better not to use Moov Atom formats - `.3gp`, `.m4a`, `.mov`, `.mp4`
 * When using proxy, VPN or special firewall settings, keep in mind that not only Yrewind should have appropriate access, but also FFmpeg
@@ -211,6 +213,7 @@ To save 90 minutes of the stream, starting from half an hour ago, at the highest
 
 * FFmpeg static build (included in the archive)
 * Windows 7 and on / Windows Server 2008 and on
+* Chromium-based browser (for some live streams)
 
 <br>
 
@@ -230,7 +233,7 @@ download downloader dvr live livestream record rewind save stream youtube
 
 ## About
 
-Records YouTube live stream that's in progress, has the ability to rewind up to 168 hours
+Records YouTube ongoing live stream, can rewind it up to 168 hours
 
 ---
 [[program page]](https://rytsikau.github.io/ee.Yrewind) [[start page]](https://rytsikau.github.io) [[author e-mail]](mailto:y.rytsikau@gmail.com)
