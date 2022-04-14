@@ -1,5 +1,20 @@
 # Changelog
 
+## [22.041] - 2022-04-14
+
+### Added
+
+Parameter `-browser` to allow browser to be used (in headless mode) if Yrewind can't get live stream info on its own.
+
+### Changed
+
+- Now the browser is used only if the `-browser` parameter is specified.
+
+### Fixed
+
+- Error when saving some live streams.
+- Several minor fixes.
+
 ## [22.011] - 2022-01-21
 
 ### Fixed
@@ -365,6 +380,6 @@
 
 - Basic functionality developed.
 
+[22.041]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220414/ee.yrewind_22.041.zip
 [22.011]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220121/ee.yrewind_22.011.zip
 [21.121]: https://github.com/rytsikau/ee.Yrewind/releases/download/20211201/ee.yrewind_21.121.zip
-[21.063]: https://github.com/rytsikau/ee.Yrewind/releases/download/20210620/ee.yrewind_21.063.zip
