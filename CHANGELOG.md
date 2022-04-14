@@ -4,7 +4,7 @@
 
 ### Added
 
-Parameter `-browser` to allow browser to be used (in headless mode) if Yrewind can't get live stream info on its own.
+- Parameter `-browser` to allow browser to be used (in headless mode) if Yrewind can't get live stream info on its own.
 
 ### Changed
 
