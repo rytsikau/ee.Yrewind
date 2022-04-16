@@ -148,7 +148,7 @@ The next example saves the livestream as *d:\My saved streams\Sky News\2021-01-1
 
 ##### [**` -browser='c:\path\to\browser\file.exe' `**](#)
 
-Allows to use browser to get technical information about the live stream. It can be useful if Yrewind can't get info about the stream on its own. The browser will be launched in headless mode. For the portable version, specify the full path to the executable file; for the installed version, it's usually enough to specify the name of the browser. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc.
+Allows to use browser in headless mode to get technical information about the live stream. It can be useful if Yrewind can't get info about the stream on its own. For the portable version, specify the full path to the executable file; for the installed version, it's usually enough to specify the name of the browser. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc. **With this option, Yrewind cannot interfere with the download of copyrighted live streams, so be careful**.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\My Portable Programs\Vivaldi\Application\vivaldi.exe'
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=msedge
 
@@ -172,10 +172,10 @@ Specifies the command to run after Yrewind exits. If it's an executable file, yo
 **More examples:**
 
 To save 15 minutes of the stream from yesterday 10:45AM to 11:00AM, at 1080p:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=Y:1045 -duration=15
+>     yrewind -u='https://www.youtube.com/watch?v=9Auq9mYxFEE' -s=Y:1045 -d=15
 
 To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified folder:
->     yrewind -url=9Auq9mYxFEE -start=20200505:0455 -resolution=720 -output='d:\My saved streams\'
+>     yrewind -u=9Auq9mYxFEE -s=20200505:0455 -r=720 -o='d:\My saved streams\'
 
 To save 90 minutes of the stream, starting from half an hour ago, at the highest available resolution:
 >     yrewind -u=9Auq9mYxFEE -s=-30 -d=90 -r=9999
