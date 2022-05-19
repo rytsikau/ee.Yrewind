@@ -1,5 +1,27 @@
 # Changelog
 
+## [22.051] - 2022-05-19
+
+### Added
+
+- Downloading of recently finished live streams (no more than 6 hours ago).
+- Option `-duration=[minutes].[seconds]`, for better usability.
+- Option `-resolution=0` to save audio only (works with both audio and video formats except `.mp4`).
+- Options `-duration=max`, `-duration=min`, `-resolution=max`, `-resolution=min`, for better usability.
+- Saving to `.m3u` and `.m3u8` formats (allows to play the specified part of the live stream without downloading, only tested with VLC mediaplayer).
+
+### Changed
+
+- Default media container format, from `.mp4` to `.mkv`.
+
+### Fixed
+
+- Several minor fixes.
+
+### Removed
+
+- Option `-start=wait` (now the program is waiting for live streams without this option).
+
 ## [22.041] - 2022-04-14
 
 ### Added
@@ -380,6 +402,6 @@
 
 - Basic functionality developed.
 
+[22.051]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220519/ee.yrewind_22.051.zip
 [22.041]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220414/ee.yrewind_22.041.zip
 [22.011]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220121/ee.yrewind_22.011.zip
-[21.121]: https://github.com/rytsikau/ee.Yrewind/releases/download/20211201/ee.yrewind_21.121.zip
