@@ -26,7 +26,7 @@ Supported parameters:
 <br>
 
 # [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20220519/ee.yrewind_22.051.zip)
-Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases)
+Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
 
@@ -73,7 +73,7 @@ To rewind the livestream or delay the start of recording, use the `-start` param
 ##### [**` -start=-[minutes] `**](#)
 ##### [**` -start=+[minutes] `**](#)
 
-This parameter specifies the point in time from which to save the stream. It's calculated relative to the moment the program was started (displayed in the first line). If the parameter is missing, program records ongoing livestream in real time; if stream is scheduled or finished, it will be downloaded from the beginning.
+This parameter specifies the point in time from which to save the stream. It's calculated relative to the moment the program was started (displayed in the first line). If the parameter is missing, program saves ongoing livestream in real time, scheduled and finished - from the beginning. Depending on technical parameters of the livestream, start point may be shifted from the requested one by several seconds (in a larger direction).
 
 To download the time interval from 7:10AM to 8:10AM on July 15, 2020:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
@@ -82,7 +82,7 @@ To download the time interval from yesterday 10:15PM to 11:15PM:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=Y:2215
 
 To download the time interval from today 02:00AM to 03:00AM:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=T:0200
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=T:020000
 
 To download from the first currently available moment:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=beginning
@@ -100,7 +100,7 @@ The program also has several other parameters:
 ##### [**` -duration=[minutes] `**](#)
 ##### [**` -duration=[minutes].[seconds] `**](#)
 
-Specifies the required duration. The minimum value is 0.01 (1 second), the maximum is limited to 300 (5 hours). If the parameter is missing, program uses the default 1 hour. The examples below saves 300 minutes of the livestream:
+Specifies the required duration. The minimum value is 0.01 (1 second), the maximum is limited to 300 (5 hours). If the parameter is missing, program uses the default 1 hour. Depending on technical parameters of the livestream, result duration may differ from the requested one by several seconds (in a larger direction). The examples below saves 300 minutes of the livestream:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=300
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=300.00
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=max
@@ -119,14 +119,14 @@ Specifies the required resolution in pixels (height). If this parameter is missi
 
 ##### [**` -ffmpeg='c:\path\to\ffmpeg\' `**](#)
 
-Specifies the path to FFmpeg library. If a relative path is specified, the base folder is the folder from which the command line was run. If this parameter is missing, Yrewind tries to find FFmpeg in own folder and using environment variables.
+Specifies the path to FFmpeg library. If relative path is specified, the base folder is the folder from which the command line was run. If this parameter is missing, Yrewind tries to find FFmpeg in its own folder and using environment variables.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -ffmpeg='c:\Program Files\FFmpeg\'
 
 <br>
 
 ##### [**` -output='c:\dir1\dir2\filename.extension' `**](#)
 
-Specifies custom folder, filename and extension (media container format) for the saved livestream. If a relative path is specified, the base folder is the folder from which the command line was run. If this parameter is missing, program uses the next default values:
+Specifies custom folder, filename and extension (media container format) for the saved livestream. If relative path is specified, the base folder is the folder from which the command line was run. If this parameter is missing, program uses the next default values:
 * `[batch file folder]\saved_streams\` - for folder
 * `[id]_[date]-[time]_[duration]_[resolution]` - for filename
 * `.mkv` - for extension
@@ -165,7 +165,7 @@ Allows to use browser in headless mode to get technical information about the li
 
 ##### [**` -cookie='c:\path\to\cookie\file.ext' `**](#)
 
-Specifies the path to the cookie file. If relative path is specified, the base folder is the folder from which the command line was run. This parameter can be useful if YouTube requires a captcha or authorization (for example, to access a restricted livestream). Cookie file can be obtained using any suitable browser add-on. Please note that the cookie created after solving captcha is usable for only a few hours. Instead of solving captcha, it's better to log in to YouTube and create cookie file after that.
+Specifies the path to the cookie file. If relative path is specified, the base folder is the folder from which the command line was run. The parameter can be useful if YouTube requires a captcha or authorization to access a livestream with age or membership restrictions. The cookie file must be in Netscape format and can be obtained using any suitable browser add-on. Please note that cookie created after solving captcha is usable for only a few hours. Instead of solving captcha, it's better to log in to YouTube and create cookie after that.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -cookie='cookies.txt'
 
 <br>
@@ -184,7 +184,7 @@ To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to
 >     yrewind -u=9Auq9mYxFEE -s=20200505:0455 -r=720 -o='d:\My saved streams\'
 
 To save 89 minutes 30 seconds of the stream from today 10:45AM to 12:15PM, at 1080p:
->     yrewind -u='https://www.youtube.com/watch?v=9Auq9mYxFEE' -s=T:1045 -d=89.30
+>     yrewind -u=9Auq9mYxFEE -s=T:1045 -d=89.30
 
 To record livestream until it ends, starting from the beginning, in `.ts` format, save result video to desktop:
 >     yrewind -u=9Auq9mYxFEE -s=b -o=%UserProfile%\Desktop\.ts -e=*getnext*
@@ -196,9 +196,10 @@ To immediately play (without downloading) with assotiated mediaplayer, from yest
 
 ## Notes
 
-* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be presented as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The farther the livestream is rewound, the greater the probability of an error. Also, if there are interruptions in the livestream at the specified time interval, the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
+* Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be presented as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The further the livestream is rewound, the less accuracy. Also, if there are interruptions in the livestream at the specified time interval, the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
 * Occasionally, the message `unable to verify the saved file is correct` appears. The reasons may be as follows: if the duration of the saved file cannot be verified (there is a possibility that the file is damaged); if the duration of the saved file does not match the requested one (also in this case, the output file name contains the word *INCOMPLETE*); if the starting point of the requested time interval cannot be accurately determined (for example due to server side error)
-* To reduce the chance of output file corruption, it's better not to use Moov Atom formats (`.3gp`, `.mov`, `.mp4`, `.m4a`), for long recordings. Also, these formats don't allow to play a file that is in the process of downloading (other formats do)
+* To reduce the chance of output file corruption, it's better not to use Moov Atom formats (`.3gp`, `.mov`, `.mp4`, `.m4a`) for long recordings. Also, these formats don't allow to play a file that is in the process of downloading (other formats do)
+* Recently finished livestreams can be downloaded within approximately 6 hours of completion. After this time, such a stream "turns" into a regular video and can be downloaded, for example, using youtube-dl
 * When using proxy, VPN or special firewall settings, keep in mind that not only Yrewind should have appropriate access, but also FFmpeg
 
 <br>
