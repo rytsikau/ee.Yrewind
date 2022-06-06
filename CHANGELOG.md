@@ -1,5 +1,19 @@
 # Changelog
 
+## [22.061] - 2022-06-06
+
+### Added
+
+- The ability to cache technical information about the live stream. Read about the `-keepstreaminfo` parameter to not use the cache.
+
+### Changed
+
+- Improved and documented `-log` parameter.
+
+### Fixed
+
+- Several minor fixes.
+
 ## [22.051] - 2022-05-19
 
 ### Added
@@ -402,6 +416,6 @@
 
 - Basic functionality developed.
 
+[22.061]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220606/ee.yrewind_22.061.zip
 [22.051]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220519/ee.yrewind_22.051.zip
 [22.041]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220414/ee.yrewind_22.041.zip
-[22.011]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220121/ee.yrewind_22.011.zip
