@@ -27,7 +27,7 @@ Supported parameters:
 
 <br>
 
-# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20220606/ee.yrewind_22.061.zip)
+# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20220622/ee.yrewind_22.062.zip)
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
@@ -43,6 +43,7 @@ Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.m
 1. Unpack the downloaded zip.
 2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples.
 3. Save *run.bat* and run it!
+* Some [examples](#examples)
 
 <br>
 
@@ -172,17 +173,17 @@ Specifies the path to the cookie file. If relative path is specified, the base f
 
 <br>
 
-##### [**` -log=true `**](#)
-
-If this parameter is set to `true`, Yrewind will generate log files (in the folder from which the command line was run).
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -log=true
-
-<br>
-
 ##### [**` -keepstreaminfo=false `**](#)
 
 If this parameter is set to `false`, Yrewind will not keep technical information about the livestream in a temporary cache file, and will delete this file if it exists.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -keepstreaminfo=false
+
+<br>
+
+##### [**` -log=true `**](#)
+
+If this parameter is set to `true`, Yrewind will generate log files (in the folder from which the command line was run).
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -log=true
 
 <br>
 
@@ -194,18 +195,18 @@ Specifies the command to run after Yrewind exits. If it's an executable file, yo
 
 <br>
 
-**More examples:**
+## Examples
 
-To save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified folder:
+Save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified folder:
 >     yrewind -u=9Auq9mYxFEE -s=20200505:0455 -r=720 -o='d:\My saved streams\'
 
-To save 89 minutes 30 seconds of the stream from today 10:45AM to 12:15PM, at 1080p:
+Save 89 minutes 30 seconds of the stream from today 10:45AM to 12:15PM, at 1080p:
 >     yrewind -u=9Auq9mYxFEE -s=T:1045 -d=89.30
 
-To record livestream until it ends, starting from the beginning, in `.ts` format, save result video to desktop:
+Record livestream until it ends, starting from the beginning, in `.ts` format, save result video to desktop:
 >     yrewind -u=9Auq9mYxFEE -s=b -o=%UserProfile%\Desktop\.ts -e=*getnext*
 
-To immediately play (without downloading) with assotiated mediaplayer, from yesterday 03:00AM, at the maximum available resolution:
+Immediately play (without downloading) with assotiated mediaplayer, from yesterday 03:00AM, at the maximum available resolution:
 >     yrewind -u=9Auq9mYxFEE -s=Y:0300 -r=max -o=.m3u -e=*output*
 
 Wait for a new livestream on the specified channel, then start recording from the 30th minute:
@@ -218,7 +219,7 @@ Wait for a new livestream on the specified channel, then start recording from th
 * Loss of packets on the streamer side causes the estimated time to shift. The offset is usually seconds, but if its internet connection is unstable and/or the stream has been running for a long time, it can be minutes or even hours. For example, if the stream was interrupted for a total of 1 hour, then 24-hour frames will be presented as 23-hour. Thus, start point time accuracy can only be guaranteed for the current moment. The further the livestream is rewound, the less accuracy. Also, if there are interruptions in the livestream at the specified time interval, the duration of the saved file will be shorter by the total duration of those interruptions; a warning for this incompleted file will be displayed
 * Occasionally, the message `unable to verify the saved file is correct` appears. The reasons may be as follows: if the duration of the saved file cannot be verified (there is a possibility that the file is damaged); if the duration of the saved file does not match the requested one (also in this case, the output file name contains the word *INCOMPLETE*); if the starting point of the requested time interval cannot be accurately determined (for example due to server side error)
 * To reduce the chance of output file corruption, it's better not to use Moov Atom formats (`.3gp`, `.mov`, `.mp4`, `.m4a`) for long recordings. Also, these formats don't allow to play a file that is in the process of downloading (other formats do)
-* Recently finished livestreams can be downloaded within approximately 6 hours of completion. After this time, such stream 'turns' into a regular video and can be downloaded, for example, using youtube-dl
+* Recently finished livestream can be downloaded within approximately 6 hours of its completion. After this time, such stream 'turns' into a regular video and can be downloaded, for example, using Youtube-dl
 * When using proxy, VPN or special firewall settings, keep in mind that not only Yrewind should have appropriate access, but also FFmpeg
 
 <br>
