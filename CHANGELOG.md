@@ -1,5 +1,15 @@
 # Changelog
 
+## [22.121] - 2022-12-03
+
+### Changed
+
+- Changed the behavior of `-browser` parameter. See its description for more information.
+
+### Fixed
+
+- Several minor fixes.
+
 ## [22.062] - 2022-06-22
 
 ### Fixed
@@ -422,6 +432,6 @@
 
 - Basic functionality developed.
 
+[22.121]: https://github.com/rytsikau/ee.Yrewind/releases/download/20221203/ee.yrewind_22.121.zip
 [22.062]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220622/ee.yrewind_22.062.zip
 [22.061]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220606/ee.yrewind_22.061.zip
-[22.051]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220519/ee.yrewind_22.051.zip
