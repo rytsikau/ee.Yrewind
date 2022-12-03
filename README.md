@@ -27,7 +27,7 @@ Supported parameters:
 
 <br>
 
-# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20220622/ee.yrewind_22.062.zip)
+# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20221203/ee.yrewind_22.121.zip)
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
@@ -160,9 +160,9 @@ The next example saves the livestream as *d:\My saved streams\Sky News\2021-01-1
 
 ##### [**` -browser='c:\path\to\browser\file.exe' `**](#)
 
-Allows to use browser in headless mode to get technical information about the livestream. It can be useful if Yrewind can't get info about the stream on its own. For the portable version of browser, specify the full path to the executable file; for the installed version, it's usually enough to specify the name. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc.
+Allows to use an alternative browser to get technical information about the livestream. For the portable version of browser, specify the full path to the executable file; for the installed version, it's usually enough to specify the name. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc. If this parameter is missing, program uses pre-installed MS Edge. If this parameter is set to `false`, Yrewind will not use browser, but it will slow down the download speed.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\My Portable Programs\Vivaldi\Application\vivaldi.exe'
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=msedge
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=chrome
 
 <br>
 
@@ -236,16 +236,16 @@ Wait for a new livestream on the specified channel, then start recording from th
 ## Developer info
 
 * C#
-* .NET Framework 4.5
-* Visual Studio Community 2019
+* .NET Framework 4.8
+* Visual Studio Community 2022
 
 <br>
 
 ## Requirements
 
 * FFmpeg static build (included in the archive)
-* Windows 7 and on / Windows Server 2008 and on
-* Chromium-based browser (for some livestreams)
+* Windows 7 and on / Windows Server 2008 R2 and on
+* Chromium-based browser
 
 <br>
 
