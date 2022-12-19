@@ -16,18 +16,18 @@ Supported parameters:
 [ ` -url (-u) ` ](#-urlurl)
 [ ` -start (-s) ` ](#-startyyyymmddhhmm--startyyyymmddhhmmss)
 [ ` -duration (-d) ` ](#-durationminutes)
-[ ` -resolution (-r) ` ](#-resolutionheightpixels)
+[ ` -resolution (-r) ` ](#-resolutionheightpixels)<br>
 [ ` -ffmpeg (-f) ` ](#-ffmpegcpathtoffmpeg)
-[ ` -output (-o) ` ](#-outputcdir1dir2filenameextension)<br>
+[ ` -output (-o) ` ](#-outputcdir1dir2filenameextension)
 [ ` -browser (-b) ` ](#-browsercpathtobrowserfileexe)
-[ ` -cookie (-c) ` ](#-cookiecpathtocookiefileext)
+[ ` -cookie (-c) ` ](#-cookiecpathtocookiefileext)<br>
 [ ` -keepstreaminfo (-k) ` ](#-keepstreaminfofalse)
 [ ` -log (-l) ` ](#-logtrue)
 [ ` -executeonexit (-e) ` ](#-executeonexitcpathtosomefileext)
 
 <br>
 
-# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20221203/ee.yrewind_22.121.zip)
+# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20221219/ee.yrewind_22.122.zip)
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
@@ -40,9 +40,9 @@ Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.m
 
 ## Quick start
 
-1. Unpack the downloaded zip.
-2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples.
-3. Save *run.bat* and run it!
+1. Unpack the downloaded zip
+2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples
+3. Save *run.bat* and run it
 * Some [examples](#examples)
 
 <br>
@@ -160,7 +160,7 @@ The next example saves the livestream as *d:\My saved streams\Sky News\2021-01-1
 
 ##### [**` -browser='c:\path\to\browser\file.exe' `**](#)
 
-Allows to use an alternative browser to get technical information about the livestream. For the portable version of browser, specify the full path to the executable file; for the installed version, it's usually enough to specify the name. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc. If this parameter is missing, program uses pre-installed MS Edge. If this parameter is set to `false`, Yrewind will not use browser, but it will slow down the download speed.
+Allows to use an alternative browser to get technical information about the livestream. For the portable version of browser, specify the full path to the executable file; for the installed version, it's usually enough to specify the name. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc. If this parameter is missing, program uses pre-installed MS Edge. If this parameter is set to `false`, Yrewind will not use browser, but this may slow down the download speed.
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\My Portable Programs\Vivaldi\Application\vivaldi.exe'
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=chrome
 
