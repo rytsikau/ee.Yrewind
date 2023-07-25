@@ -1,5 +1,11 @@
 # Changelog
 
+## [23.071] - 2023-07-25
+
+### Fixed
+
+- Fixed YouTube throttling. For faster downloading, use Chromium-based browsers. Attention: updated browsers are not compatible, for example, Chrome only works with version 110 and below. AVC video data is also not available, only VP9.
+
 ## [22.122] - 2022-12-19
 
 ### Fixed
@@ -438,6 +444,6 @@
 
 - Basic functionality developed.
 
+[23.071]: https://github.com/rytsikau/ee.Yrewind/releases/download/20230725/ee.yrewind_23.071.zip
 [22.122]: https://github.com/rytsikau/ee.Yrewind/releases/download/20221219/ee.yrewind_22.122.zip
 [22.121]: https://github.com/rytsikau/ee.Yrewind/releases/download/20221203/ee.yrewind_22.121.zip
-[22.062]: https://github.com/rytsikau/ee.Yrewind/releases/download/20220622/ee.yrewind_22.062.zip
