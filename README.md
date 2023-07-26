@@ -213,6 +213,21 @@ Immediately play (without downloading) with assotiated mediaplayer, from yesterd
 Wait for a new livestream on the specified channel, then start recording from the 30th minute:
 >     yrewind -u=https://www.youtube.com/c/SkyNews -s=+30
 
+Batch file example (runs 3 copies of the program at the same time):
+```
+@echo off
+set O="d:\My Streams\"
+set B="c:\Program Files\Chrome\chrome.exe"
+set F="c:\Program Files\FFmpeg\"
+set Y="c:\Program Files\ee.Yrewind\"
+cd /d %Y%
+
+set U=9Auq9mYxFEE
+start yrewind -f=%F% -b=%B% -o=%O% -u=%U% -s=Y:1500
+start yrewind -f=%F% -b=%B% -o=%O% -u=%U% -s=Y:1600
+start yrewind -f=%F% -b=%B% -o=%O% -u=%U% -s=Y:1700
+```
+
 <br>
 
 ## Notes
