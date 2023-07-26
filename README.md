@@ -28,7 +28,7 @@ Supported parameters:
 <br>
 
 # [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20230725/ee.yrewind_23.071.zip)
-#### Fixed YouTube throttling. For faster downloading, use Chromium-based browsers. Attention: updated browsers are not compatible, for example, Chrome only works with version 110 and below. AVC video data is also not available, only VP9.
+#### Fixed YouTube throttling. For faster downloading, use Chromium-based browsers. Attention: updated browsers are not compatible, for example, Chrome only works with version 110 and below.
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
