@@ -27,7 +27,7 @@ Supported parameters:
 
 <br>
 
-# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20230725/ee.yrewind_23.071.zip)
+# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20230804/ee.yrewind_23.081.zip)
 #### Fixed YouTube throttling. For faster downloading, use Chromium-based browsers. Attention: updated browsers are not compatible, for example, Chrome only works with version 110 and below.
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
@@ -154,15 +154,15 @@ The extension defines the format of the media container in which the livestream 
 The example below saves the livestream as *\saved_streams\9Auq9mYxFEE_20210123-185830_060.00m_1080p.ts*:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -output=.ts
 
-The next example saves the livestream as *d:\My saved streams\Sky News\2021-01-12_12-34.mkv*:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -output='d:\My saved streams\*author*\*start[yyyy-MM-dd_HH-mm]*'
+The next example saves the livestream as *d:\Streams\Sky News\2021-01-12_12-34.mkv*:
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -output='d:\Streams\*author*\*start[yyyy-MM-dd_HH-mm]*'
 
 <br>
 
 ##### [**` -browser='c:\path\to\browser\file.exe' `**](#)
 
 Allows to use an alternative browser to get technical information about the livestream. For the portable version of browser, specify the full path to the executable file; for the installed version, it's usually enough to specify the name. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc. If this parameter is missing, program uses pre-installed MS Edge. If this parameter is set to `false`, Yrewind will not use browser, but this may slow down the download speed.
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\My Portable Programs\Vivaldi\Application\vivaldi.exe'
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\Portable programs\Vivaldi\Application\vivaldi.exe'
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=chrome
 
 <br>
@@ -199,7 +199,7 @@ Specifies the command to run after Yrewind exits. If it's an executable file, yo
 ## Examples
 
 Save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified folder:
->     yrewind -u=9Auq9mYxFEE -s=20200505:0455 -r=720 -o='d:\My saved streams\'
+>     yrewind -u=9Auq9mYxFEE -s=20200505:0455 -r=720 -o='d:\Streams\'
 
 Save 89 minutes 30 seconds of the stream from today 10:45AM to 12:15PM, at 1080p:
 >     yrewind -u=9Auq9mYxFEE -s=T:1045 -d=89.30
@@ -216,10 +216,10 @@ Wait for a new livestream on the specified channel, then start recording from th
 Batch file example (runs 3 copies of the program at the same time):
 ```
 @echo off
-set O="d:\My Streams\"
-set B="c:\Program Files\Chrome\chrome.exe"
-set F="c:\Program Files\FFmpeg\"
-set Y="c:\Program Files\ee.Yrewind\"
+set O='d:\Streams\'
+set B='c:\Program Files\Chrome\chrome.exe'
+set F='c:\Program Files\FFmpeg\'
+set Y='c:\Program Files\ee.Yrewind\'
 cd /d %Y%
 
 set U=9Auq9mYxFEE
