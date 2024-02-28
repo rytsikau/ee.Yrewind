@@ -92,7 +92,7 @@ To download from the first currently available moment:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=beginning
 
 To download the time interval from 3 hours ago to 2 hours ago:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-180
+>     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-180 -duration=120
 
 To wait 2 hours, then record for 1 hour:
 >     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=+120
