@@ -44,7 +44,7 @@ Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.m
 2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples
 3. Save *run.bat* and run it
 * Some [examples](#examples)
-* Since 2022, YouTube throttle third party downloaders. So, for faster operation, use the `-b` parameter pointing to the LEGACY browser. For example, Chrome with version 110 and [below](https://portableapps.com/downloading/?a=GoogleChromePortableLegacyWin7) works well
+* Since 2022, YouTube throttle third party downloaders. So, for faster operation, use the `-b` parameter pointing to the LEGACY browser. For example, Chrome with version 110 and [below](https://portableapps.com/downloading/?a=GoogleChromePortableLegacyWin7&s=s&p=&d=pa&f=GoogleChromePortableLegacyWin7_109.0.5414.120_online.paf.exe) works well
 
 <br>
 
