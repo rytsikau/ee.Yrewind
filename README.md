@@ -28,7 +28,7 @@ Supported parameters:
 <br>
 
 # [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20230804/ee.yrewind_23.081.zip)
-#### Fixed YouTube throttling. For faster downloading, use Chromium-based browsers. Attention: updated browsers are not compatible, for example, Chrome only works with version 110 and below.
+#### Warning: For faster downloading, DO NOT use an updated browser. For example, Chrome only works fast with version 110 and below. A suitable portable version can be found [here](https://portableapps.com/downloading/?a=GoogleChromePortableLegacyWin7).
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
