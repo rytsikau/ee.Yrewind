@@ -28,7 +28,6 @@ Supported parameters:
 <br>
 
 # [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20230804/ee.yrewind_23.081.zip)
-#### Warning: For faster downloading, DO NOT use an updated browser. For example, Chrome only works fast with version 110 and below. A suitable portable version can be found [here](https://portableapps.com/downloading/?a=GoogleChromePortableLegacyWin7).
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
@@ -45,6 +44,7 @@ Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.m
 2. Open *run.bat* in a text editor and paste the URLs of required streams instead of existing samples
 3. Save *run.bat* and run it
 * Some [examples](#examples)
+* Since 2022, YouTube throttle third party downloaders. So, for faster operation, use the `-b` parameter pointing to the LEGACY browser. For example, Chrome with version 110 and [below](https://portableapps.com/downloading/?a=GoogleChromePortableLegacyWin7) works well
 
 <br>
 
