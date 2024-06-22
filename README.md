@@ -27,7 +27,7 @@ Supported parameters:
 
 <br>
 
-# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20230804/ee.yrewind_23.081.zip)
+# [>> download <<](https://github.com/rytsikau/ee.Yrewind/releases/download/20240622/ee.yrewind_24.061.zip)
 Changelog is [here](https://github.com/rytsikau/ee.Yrewind/blob/main/CHANGELOG.md). If something doesn't work, please [report](https://github.com/rytsikau/ee.Yrewind/issues) and try [previous versions](https://github.com/rytsikau/ee.Yrewind/releases).
 
 <br>
@@ -55,9 +55,9 @@ The only required command line argument is the `-url`:
 ##### [**` -url=[url] `**](#)
 
 With this command, the program records a livestream in real time for 1 hour at 1080p resolution, or at a lower if 1080p is not available. URL can be specified in various formats:
->     yrewind -url='youtube.com/watch?v=9Auq9mYxFEE'
->     yrewind -url=https://www.youtu.be/9Auq9mYxFEE
->     yrewind -url=9Auq9mYxFEE
+>     yrewind -url='youtube.com/watch?v=oJUvTVdTMyY'
+>     yrewind -url=https://www.youtu.be/oJUvTVdTMyY
+>     yrewind -url=oJUvTVdTMyY
 >     (etc.)
 
 Channel URL can also be specified, this allows to wait for a new livestream on the channel and automatically start recording from the first second when it starts. Please note that when specifying a channel URL, active livestreams are ignored, the program will wait for a new one.
@@ -80,22 +80,22 @@ To rewind the livestream or delay the start of recording, use the `-start` param
 This parameter specifies the point in time from which to save the stream. It's calculated relative to the moment the program was started (displayed in the first line). If the parameter is missing, program saves ongoing livestream in real time, scheduled and finished - from the beginning. Depending on technical parameters of the livestream, start point may be shifted from the requested one by several seconds (in a larger direction).
 
 To download the time interval from 7:10AM to 8:10AM on July 15, 2020:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=20200715:0710
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -start=20200715:0710
 
 To download the time interval from yesterday 10:15PM to 11:15PM:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=Y:2215
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -start=Y:2215
 
 To download the time interval from today 02:00AM to 03:00AM:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=T:020000
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -start=T:020000
 
 To download from the first currently available moment:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=beginning
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -start=beginning
 
 To download the time interval from 3 hours ago to 2 hours ago:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=-180
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -start=-180
 
 To wait 2 hours, then record for 1 hour:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -start=+120
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -start=+120
 
 <br>
 
@@ -105,26 +105,26 @@ The program also has several other parameters:
 ##### [**` -duration=[minutes].[seconds] `**](#)
 
 Specifies the required duration. The minimum value is 0.01 (1 second), the maximum is limited to 300 (5 hours). If the parameter is missing, program uses the default 1 hour. Depending on technical parameters of the livestream, result duration may differ from the requested one by several seconds (in a larger direction). The examples below saves 300 minutes of the livestream:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=300
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=300.00
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -duration=max
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -duration=300
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -duration=300.00
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -duration=max
 
 <br>
 
 ##### [**` -resolution=[heightPixels] `**](#)
 
 Specifies the required resolution in pixels (height). If this parameter is missing, program uses the default 1080. If the requested resolution is not available, the nearest lower will be selected. In the examples below, the livestream will be saved at 144p:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=144
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=200
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=1
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -resolution=min
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -resolution=144
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -resolution=200
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -resolution=1
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -resolution=min
 
 <br>
 
 ##### [**` -ffmpeg='c:\path\to\ffmpeg\' `**](#)
 
 Specifies the path to FFmpeg library. If relative path is specified, the base folder is the folder from which the command line was run. If this parameter is missing, Yrewind tries to find FFmpeg in its own folder and using environment variables.
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -ffmpeg='c:\Program Files\FFmpeg\'
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -ffmpeg='c:\Program Files\FFmpeg\'
 
 <br>
 
@@ -151,64 +151,64 @@ The extension defines the format of the media container in which the livestream 
 * `.aac`, `.m4a`, `.wma` - use MP4a data; saves only audio (to save only audio, you can also specify zero resolution `-r=0` - this works with all audio and video formats except `.mp4`)
 * `.m3u`, `.m3u8` - playlist files pointing to livestream on the Internet, allows watching in media player without downloading. Tested with VLC. Shelf life of playlist files is only 6 hours
 
-The example below saves the livestream as *\saved_streams\9Auq9mYxFEE_20210123-185830_060.00m_1080p.ts*:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -output=.ts
+The example below saves the livestream as *\saved_streams\oJUvTVdTMyY_20210123-185830_060.00m_1080p.ts*:
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -output=.ts
 
 The next example saves the livestream as *d:\Streams\Sky News\2021-01-12_12-34.mkv*:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -output='d:\Streams\*author*\*start[yyyy-MM-dd_HH-mm]*'
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -output='d:\Streams\*author*\*start[yyyy-MM-dd_HH-mm]*'
 
 <br>
 
 ##### [**` -browser='c:\path\to\browser\file.exe' `**](#)
 
 Allows to use an alternative browser to get technical information about the livestream. For the portable version of browser, specify the full path to the executable file; for the installed version, it's usually enough to specify the name. Only Chromium-based browsers are supported - Chrome, Edge, Brave, Opera, Vivaldi, etc. If this parameter is missing, program uses pre-installed MS Edge. If this parameter is set to `false`, Yrewind will not use browser, but this may slow down the download speed.
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser='d:\Portable programs\Vivaldi\Application\vivaldi.exe'
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -browser=chrome
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -browser='d:\Portable programs\Vivaldi\Application\vivaldi.exe'
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -browser=chrome
 
 <br>
 
 ##### [**` -cookie='c:\path\to\cookie\file.ext' `**](#)
 
 Specifies the path to the cookie file. If relative path is specified, the base folder is the folder from which the command line was run. The parameter can be useful if YouTube requires a captcha or authorization to access a livestream with age or membership restrictions. The cookie file must be in Netscape format and can be obtained using any suitable browser add-on. Please note that cookie created after solving captcha is usable for only a few hours. Instead of solving captcha, it's better to log in to YouTube and create cookie after that.
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -cookie='cookies.txt'
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -cookie='cookies.txt'
 
 <br>
 
 ##### [**` -keepstreaminfo=false `**](#)
 
 If this parameter is set to `false`, Yrewind will not keep technical information about the livestream in a temporary cache file, and will delete this file if it exists.
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -keepstreaminfo=false
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -keepstreaminfo=false
 
 <br>
 
 ##### [**` -log=true `**](#)
 
 If this parameter is set to `true`, Yrewind will generate log files (in the folder from which the command line was run).
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -log=true
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -log=true
 
 <br>
 
 ##### [**` -executeonexit='c:\path\to\some\file.ext' `**](#)
 
 Specifies the command to run after Yrewind exits. If it's an executable file, you can also specify the arguments it supports (don't forget the quotes - nested supported). The non-executable file will be launched by the associated program. The parameter supports two rename masks - `*output*`, which contains the full path of the saved video, and `*getnext*`, which contains the command to start Yrewind again to get the next interval of the stream. When using `-executeonexit=*getnext*` command inside a batch file, keep in mind that this file is first executed to the end, and only then the `*getnext*` command is executed. Also use rename masks `*start*` and `*start[customDateTime]*` to avoid duplicate names of saved stream parts (or just use default auto-naming). In the first example below, the saved video will be opened by the associated program, in the second - using the specified program:
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit=*output*
->     yrewind -url='https://www.youtube.com/watch?v=9Auq9mYxFEE' -executeonexit=''c:\Program Files\VLC mediaplayer\vlc.exe' *output*'
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -executeonexit=*output*
+>     yrewind -url='https://www.youtube.com/watch?v=oJUvTVdTMyY' -executeonexit=''c:\Program Files\VLC mediaplayer\vlc.exe' *output*'
 
 <br>
 
 ## Examples
 
 Save 1 hour of the stream from 04:55AM to 05:55AM on May 5, 2020, at 720p, to specified folder:
->     yrewind -u=9Auq9mYxFEE -s=20200505:0455 -r=720 -o='d:\Streams\'
+>     yrewind -u=oJUvTVdTMyY -s=20200505:0455 -r=720 -o='d:\Streams\'
 
 Save 89 minutes 30 seconds of the stream from today 10:45AM to 12:15PM, at 1080p:
->     yrewind -u=9Auq9mYxFEE -s=T:1045 -d=89.30
+>     yrewind -u=oJUvTVdTMyY -s=T:1045 -d=89.30
 
 Record livestream until it ends, starting from the beginning, in `.ts` format, save result video to desktop:
->     yrewind -u=9Auq9mYxFEE -s=b -o=%UserProfile%\Desktop\.ts -e=*getnext*
+>     yrewind -u=oJUvTVdTMyY -s=b -o=%UserProfile%\Desktop\.ts -e=*getnext*
 
 Immediately play (without downloading) with assotiated mediaplayer, from yesterday 03:00AM, at the maximum available resolution:
->     yrewind -u=9Auq9mYxFEE -s=Y:0300 -r=max -o=.m3u -e=*output*
+>     yrewind -u=oJUvTVdTMyY -s=Y:0300 -r=max -o=.m3u -e=*output*
 
 Wait for a new livestream on the specified channel, then start recording from the 30th minute:
 >     yrewind -u=https://www.youtube.com/c/SkyNews -s=+30
@@ -222,7 +222,7 @@ set F='c:\Program Files\FFmpeg\'
 set Y='c:\Program Files\ee.Yrewind\'
 cd /d %Y%
 
-set U=9Auq9mYxFEE
+set U=oJUvTVdTMyY
 start yrewind -f=%F% -b=%B% -o=%O% -u=%U% -s=Y:1500
 start yrewind -f=%F% -b=%B% -o=%O% -u=%U% -s=Y:1600
 start yrewind -f=%F% -b=%B% -o=%O% -u=%U% -s=Y:1700
