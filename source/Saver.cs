@@ -634,7 +634,7 @@ namespace yrewind
             var arguments =
                 "-loglevel fatal" + " " +
                 "-stats" + " " +
-                "-i " + outputPathTmp + ".audio" + " " +
+                "-i " + "\"" + outputPathTmp + ".audio" + "\"" + " " +
                 videoSource + " " +
                 "-metadata comment=\"Saved with " + Constants.Name + "\"" + " " +
                 "-metadata title=\"" + metadataTitle + "\"" + " " +
